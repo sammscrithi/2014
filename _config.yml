@@ -1,0 +1,6 @@
+name: saMMsCRIthi '14
+markdown: redcarpet
+pygments: true
+baseurl: /2014
+permalink: /:categories/:title/
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
