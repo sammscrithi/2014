@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/css/jb-clock.css">
+
+
+  <script type="text/javascript" src="{{ site.baseurl }}/js/jb-clock.js"></script>
+            <script type="text/javascript">
+        $(document).ready(function(){
+            JBCountDown({
+                        secondsColor : "#ffdc50",
+                secondsGlow  : "none",
+                
+                minutesColor : "#9cdb7d",
+                minutesGlow  : "none",
+                
+                hoursColor   : "#378cff",
+                hoursGlow    : "none",
+                
+                daysColor    : "#ff6565",
+                daysGlow     : "none",
+                
+                /* startDate     : "1411097400", */
+                startDate : Date.parse("September 19, 2014 09:00")/1000,
+                endDate	: "1411322400",
+                now         : Date.now()/1000            });
+        });
+    </script>

@@ -1,0 +1,39 @@
+
+  <div id='timer'>
+        <div class="wrapper">
+        <div class="clock">
+            <!-- Days -->
+            <div class="clock_days">
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type_days">Days</p>
+                    </div>
+            </div>
+            <!-- Days -->
+            <!-- Hours -->
+            <div class="clock_hours">
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type_hours">Hours</p>
+                    </div>
+            </div>
+            <!-- Hours -->
+            <!-- Minutes -->
+            <div class="clock_minutes">
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type_minutes">Minutes</p>
+                    </div>
+            </div>
+            <!-- Minutes -->
+            <!-- Seconds -->
+            <div class="clock_seconds">
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type_seconds">Seconds</p>
+                    </div>
+            </div>
+            <!-- Seconds -->
+        </div>
+        </div><!--/wrapper-->			
+</div>

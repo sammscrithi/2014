@@ -1,0 +1,17 @@
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.mmenu.min.all.js"></script> -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/4.3.2/js/jquery.mmenu.min.all.js"></script>
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/4.3.2/css/jquery.mmenu.all.min.css" type="text/css" rel="stylesheet" />
+<!--    <link href="{{ site.baseurl }}/css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" /> -->
+     
+		<script type="text/javascript">
+		   $(document).ready(function() {
+		      $("#my-menu").mmenu({
+		      		counters: true,
+		      		slidingSubmenus: true,
+		      	});
+		      });
+		</script>
+	

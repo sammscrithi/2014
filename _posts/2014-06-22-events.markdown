@@ -1,10 +1,6 @@
 ---
-layout: htmlcontainer
+layout: event
 title:  "Events"
 date:   2014-06-22 12:47:58
 categories: 
 ---
-<div id="my-header" style="background:grey;color:white; text-align:left">
-<a href="#my-menu">Open the menu</a>
-</div>
-
