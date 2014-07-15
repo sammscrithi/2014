@@ -70,6 +70,11 @@ html.mm-opening #hamburger:after
 	bottom: 15px;
 }
 
+body {
+	background:black;
+	height:100%;
+}
 .content {
 	padding: 50px;
+	color:white;
 }

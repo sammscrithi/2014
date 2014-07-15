@@ -1,0 +1,11 @@
+---
+layout: upload
+title:  "Uploads"
+date:   2014-06-22 12:47:58
+categories: 
+---
+<ul>
+ {% for post in site.categories['uploads'] %}
+	<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
