@@ -72,7 +72,9 @@ html.mm-opening #hamburger:after
 
 body {
 	background:black;
+	height:100%;
 }
 .content {
 	padding: 50px;
+	color:white;
 }
