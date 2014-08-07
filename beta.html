@@ -2,15 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <title>saMMsCRIthi '14 - The Annual Cultural Extravaganza of Mysore Medical College & Research Institute, Mysore</title>
-    <link rel="stylesheet" href="/2014/css/homestyles.css">
+    <link rel="stylesheet" href="/2014/css/beta.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="/2014/css/jb-clock.css">
 
 
@@ -39,8 +44,9 @@
 
     
   </head>
-  <body>
-	  
+  <body data-spy="scroll" data-target="nav">
+  <section id="home">
+  	  
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -54,9 +60,8 @@
    	
    	<h1>saMMsCRIthi '14</h1>
 	<h2>The Annual Cultural Extravaganza of Mysore Medical College & Research Institute, Mysore</h2>
-	<h3>Coming up in...</h3>
-
-	
+	<div id="promovid">  <iframe width="560" height="315" src="//www.youtube.com/embed/BC2J0xh6E5c?rel=0&showinfo=0&controls=2" frameborder="0" allowfullscreen></iframe></div>
+		 
   <div id='timer'>
         <div class="wrapper">
         <div class="clock">
@@ -96,20 +101,81 @@
         </div><!--/wrapper-->			
 </div>
 
+		 to kickoff...
+    <nav><ul class="nav nav-pills" id="#mainnav">
+	  <li><a href="#home">Home</a></li>
+	  <li><a href="#events">Events</a></li>
+	  <li><a href="#sponsors">Sponsors</a></li>
+  	  <li><a href="#contact">Contact</a></li>
+           <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#about">About us</a></li>
+                  <li><a href="#location">Location</a></li>
+                  <li><a href="#history">History</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+	</ul></nav>
+    
+  </section>
+  <section id="events">
+  	<div class="sectionhead"><button type="button" class="btn btn-primary btn-lg btn-block">Events</button></div>
+  	<div class="sectioncontent">
+  		All events
+  		<span id="eventnav">
+  		<ul class="nav nav-pills nav-stacked">
+		  <li class="active"><a href="#">Home</a></li>
+		  <li class="dropdown">
+    			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      			Dropdown <span class="caret"></span>
+    			</a>
+			    <ul class="dropdown-menu" role="menu">
+			      ...
+			    </ul>
+		  </li>
+		  <li><a href="#">Profile</a></li>
+	  	  <li><a href="#">Messages</a></li>
+		</ul>
+		</span>
+		<span id="eventdetails">
+			<span id="fashionshow">Fashion Show</span>
+		</span>
+  	</div>
+  </section>
+	
+	
+  <section id="sponsors">
+  <div class="sectioncontent">
+  	<a href="#contact">Get featured here!</a>
+  </div>
+  </section>
+  <section id="contact">
+  <div class="sectioncontent">
+  	Contact: sammscrithi@gmail.com
+  </div>
+  </section>
+    <section id="about">
+  <div class="sectioncontent">
+	saMMsCRIthi is an annual fest
+  </div>
+  </section>
+    <section id="location">
+  <div class="sectioncontent">
+	JK Grounds
+  </div>
+  </section>
+    <section id="history">
+  <div class="sectioncontent">
+	Long history
+  </div>
+  </section>
 
 
-	 <div class="socialmedia">
-   
-   <div class="fb-like-box" data-href="https://www.facebook.com/saMMsCRIthi" data-height="305" data-width="290" data-colorscheme="dark" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
-   
-   <div class="twitter" style="display:inline-block; width:290px;">
-   <a class="twitter-timeline"  href="https://twitter.com/saMMsCRIthi"  data-widget-id="480198281482362880">Tweets by @saMMsCRIthi</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
-  		
-    </div>
 
-	    
 	<div id="statistics" style="text-align:center;">
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -123,6 +189,73 @@
 </script>
 
 	</div>
+	<!-- scripts start here </body> follows -->
+	<script type="text/javascript" src="js/scrollspy.js"></script>
+	<script>
+	
+	
+	$(document).ready(function() {
+	
+	function scrollnav() {
+		var scroll = $(this).scrollTop();
+		if (scroll > topdist) {
+			$('nav').css({"position":"fixed","top":"0", "width":"100%","margin":"0 auto"});
+		} else {
+			$('nav').css({"position":"static","top":"auto"});
+		}
+	}
+	
+	
+	if(window.location.hash) {
+		var target=$(window.location.hash);
+		window.location.hash='';
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      		if (target.length) {
+			$('html,body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+		}
+	} 
+	
+	function changeactive(newactive){
+		console.log('called to activechange'+newactive)
+		$('#mainnav li[class="active"]').removeClass("active");
+		$('#mainnav a[href$="'+newactive+'"]').parent().addClass("active");
+	}
+	window.changeactive=changeactive;
+	var entered;
+	$('section').on('scrollSpy:enter', function() {
+		console.log('enter:', $(this).attr('id'));
+		entered=($(this).attr('id'));
+	});
+	$('section').on('scrollSpy:exit', function() {
+		console.log('exit:', $(this).attr('id'));
+		//changeactive(entered);
+	});
+	$('section').scrollSpy();
+	
+	$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html,body').animate({
+					scrollTop: target.offset().top
+					}, 1000);
+					changeactive(this.hash)
+					return false;
+				}
+			}
+		});
+	});
+	
+	var topDist = $('nav').position();
+	var topdist=topDist.top;
+	scrollnav();
+	$(document).scroll(scrollnav);
+});
+	</script>
   </body>
 </html>
 
