@@ -14,6 +14,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-responsive.css" rel="stylesheet">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="/2014/css/jb-clock.css">
@@ -57,7 +58,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-   	
+   	<img src='/images/logo.png' width='100px'></img>
    	<h1>saMMsCRIthi '14</h1>
 	<h2>The Annual Cultural Extravaganza of Mysore Medical College & Research Institute, Mysore</h2>
 	<div id="promovid">  <iframe width="560" height="315" src="//www.youtube.com/embed/BC2J0xh6E5c?rel=0&showinfo=0&controls=2" frameborder="0" allowfullscreen></iframe></div>
@@ -124,12 +125,13 @@
   </section>
   <section id="events">
   	<div class="sectionhead"><button type="button" class="btn btn-primary btn-lg btn-block">Events</button></div>
-  	<div class="sectioncontent">
-  		All events
-  		<span id="eventnav">
+  	<div class="sectioncontent container-fluid">
+  	<div class="row">
+  		<div class="col-md-1"></div>
+  		<div id="eventnav" class="col-xs-4 col-md-2">
   		<ul class="nav nav-pills nav-stacked">
 		  <li class="active"><a href="#">Home</a></li>
-		  <li class="dropdown">
+		  <li class="active dropdown">
     			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
       			Dropdown <span class="caret"></span>
     			</a>
@@ -140,17 +142,23 @@
 		  <li><a href="#">Profile</a></li>
 	  	  <li><a href="#">Messages</a></li>
 		</ul>
-		</span>
-		<span id="eventdetails">
-			<span id="fashionshow">Fashion Show</span>
-		</span>
+		</div>
+		<div class="col-xs-1"></div>
+		<div id="eventdetails" class="col-xs-8 col-md-9">
+			<div id="fashionshow">Fashion Show</div>
+		</div>
+	</div>
   	</div>
   </section>
 	
 	
   <section id="sponsors">
-  <div class="sectioncontent">
-  	<a href="#contact">Get featured here!</a>
+  <div class="sectioncontent ">
+	   <div class="jumbotron">
+		<h1>Become a part of history!</h1>
+		<p class="lead">Sponsors are welcome to take part in this juggernaut of art, music, sports, and wit! </p>
+		<p><a class="btn btn-lg btn-success" href="#contact" role="button">Get in touch</a></p>
+	      </div>
   </div>
   </section>
   <section id="contact">

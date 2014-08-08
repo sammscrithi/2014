@@ -9,6 +9,12 @@ section{
 
 #home{
 	text-align:center;
+	background-size:cover;
+}
+#home h1{
+}
+#home h2{
+	font-size:1.5em;
 }
 
 
@@ -46,7 +52,7 @@ nav ul{
 	background:#abcdef;
 	display: inline-block; 
 	float: none; 
-	margin:30px auto 0;
+	margin:5px auto 0;
 }
 
 @media all and (max-width: 560px) {
@@ -59,15 +65,22 @@ nav ul{
 	display:none;
 }
 .sectioncontent{
-	padding:100px;
-}
-
-sectioncontent{
 	padding-top:100px;
 }
 
-#eventnav{
-	width:100px;
+
+#eventnav {
+	padding-left:0px;
+	margin-left:-10px;
 }
 #eventdetails{
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
 }
