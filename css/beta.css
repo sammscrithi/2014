@@ -9,7 +9,7 @@ section{
 
 #home{
 	text-align:center;
-	background-size:cover;
+	background-color:#efefef;
 }
 #home h1{
 }
@@ -17,6 +17,41 @@ section{
 	font-size:1.5em;
 }
 
+.row-centered {
+    text-align:center;
+
+}
+
+#youtubefollow > div{
+	height:70px !important;
+	padding-top:15px !important;
+}
+
+#twitterfollow, #googlefollow{
+	margin-top:25px;
+}
+
+
+@media (min-width: 1000px) {
+#rightdance{
+	background:url('/2014/images/alvish.gif') no-repeat;
+	background-size:50%;
+	width:30%;
+	position:absolute;
+	right:-100px;
+	top:210px;
+	height:100%;
+}
+#leftdance{
+	background:url('/2014/images/charu.gif') no-repeat;
+	background-size:50%;
+	width:30%;
+	position:absolute;
+	left:70px;
+	top:210px;
+	height:100%;
+}
+}
 
 #promovid iframe{
 	display:block;
@@ -54,13 +89,24 @@ nav ul{
 	float: none; 
 	margin:5px auto 0;
 }
-
+#navhomeimg{
+	position: absolute;
+	left: -48px;
+	width: 60px;
+	top: -10px;
+	display:none;
+}
 @media all and (max-width: 560px) {
 nav ul{
 	margin:0px auto 0;
 }
+#navhomeimg{
+	left:5px;
 }
-
+}
+#navplaceholder{
+	display:none;
+}
 .sectionhead{
 	display:none;
 }
@@ -68,14 +114,23 @@ nav ul{
 	padding-top:100px;
 }
 
+#events{
+	background-color:#dedede;
+}
 
 #eventnav {
 	padding-left:0px;
 	margin-left:-10px;
 }
 #eventdetails{
+	height:auto;
+	overflow:auto;
+	position:relative;
 }
 
+#sponsors{
+	background:#cdcdcd;	
+}
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
@@ -83,4 +138,7 @@ nav ul{
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
+}
+#contact{
+	background:#dfdfdf;
 }
