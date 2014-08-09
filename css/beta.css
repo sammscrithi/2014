@@ -121,7 +121,59 @@ nav ul{
 #eventnav {
 	padding-left:0px;
 	margin-left:-10px;
+	overflow: auto;
 }
+
+.nav>div>div>li{
+	position:relative;
+	display:block
+}
+
+.nav>div>div>li>a{
+	position:relative;
+	display:block;
+	padding:10px 15px
+}
+
+.nav>div>div>li>a:hover,.nav>div>div>li>a:focus{
+	text-decoration:none;
+	background-color:#eee
+}
+
+
+.nav-pills>div>div>li{
+	float:left
+}
+
+.nav-pills>div>div>li>a{
+	border-radius:4px
+}
+
+.nav-pills>div>div>li+li{
+	margin-left:2px
+}
+
+.nav-pills>div>div>li.active>a,.nav-pills>div>div>li.active>a:hover,.nav-pills>div>div>li.active>a:focus{
+	color:#fff;
+	background-color:#428bca
+}
+
+.nav-stacked>div>div>li{
+	float:none
+}
+
+.nav-stacked>div>div>li+li{
+	margin-top:2px;
+	margin-left:0
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 0px;
+    }
+.ui-accordion-header{
+	word-break:break-all;
+}
+
 #eventdetails{
 	height:auto;
 	overflow:auto;
@@ -141,4 +193,8 @@ nav ul{
 }
 #contact{
 	background:#dfdfdf;
+}
+
+footer{
+  text-align:center;
 }
