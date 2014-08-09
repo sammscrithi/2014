@@ -1,0 +1,27 @@
+{% for event in site.data.events %}
+	<div id="{{ event.id }}"><h4>{% if event.nickname %}{{ event.nickname }} - {% endif %}{{event.title}}</h4></div>
+	{{ event.description }}
+	{% if event.entryfee %}
+		Entry fee: {{ event.entryfee }}
+	{% endif %}	
+	{% if event.rules %}
+	Rules:<ul>
+	{% for rule in event.rules %}
+	<li>{{ rule }}</li>
+	{% endfor %}
+	</ul>
+	{% endif %}
+	{% if event.timelimit %}
+		Time limit: {{ event.timelimit }}<br>
+	{% endif %}
+	{% if event.teamsize %}
+		Team size: {{ event.teamsize }}
+	{% endif %}
+	{% if event.org %}
+	<br>
+		Contact: {% for orgy in event.org %} {% for member in site.data.members %} {% if orgy == member.id %} 
+		{%if member.fb%}<a href="https://facebook.com/{{member.fb}}">{%endif%}	{{ member.name }} {%if member.fb%}</a>{%endif%}
+		{% endif %} {% endfor %} {% endfor %}
+	{%endif%}
+
+{% endfor %}

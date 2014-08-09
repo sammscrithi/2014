@@ -1,0 +1,13 @@
+<div id="eventnav" class="col-xs-4 col-md-2">
+<ul class="nav nav-pills nav-stacked">
+<div id="accordion">
+	{% for cat in site.eventcats %}
+	<h3>{{ cat | capitalize }}</h3>
+	<div id="{{ cat }}">
+	{% for event in site.data.events %}{% if cat == event.cat %}
+	<li><a href="#{{ event.id }}">{{ event.title }}</a></li>{% endif %}{% endfor %}
+	</div>
+	{% endfor %}
+</div>
+</ul>
+</div>

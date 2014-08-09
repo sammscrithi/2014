@@ -7,36 +7,138 @@ title: saMMsCRIthi '14
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <title>saMMsCRIthi '14 - The Annual Cultural Extravaganza of Mysore Medical College & Research Institute, Mysore</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/homestyles.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    {% include countdownjs %}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-responsive.css" rel="stylesheet">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/jb-clock.css">
     
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/beta.css">
   </head>
-  <body>
-	{% include fbroot %}
-   	
-  <h1>saMMsCRIthi '14 </h1>
-<div id="promovid">  <iframe width="560" height="315" src="//www.youtube.com/embed/BC2J0xh6E5c?rel=0&showinfo=0&controls=2" frameborder="0" allowfullscreen></iframe></div>
+  <body data-spy="scroll" data-target="nav">
+  {% include fbroot %}
+  <section id="home">
+   	<img src='{{ site.baseurl }}/images/logo.png' width='100px'></img>
+   	<h1>saMMsCRIthi '14</h1>
 	<h2>The Annual Cultural Extravaganza of Mysore Medical College & Research Institute, Mysore</h2>
-	<div style="text-align:center">	<a href="{{ site.baseurl }}/beta">Visit beta website</a></div>
-	<h3>Coming up in...</h3>
-
-	{% include countdown %}
-
-
-
-
-	{% include socialmedia %}
-	    
+	<div id="promovid">  <iframe width="560" height="315" src="//www.youtube.com/embed/BC2J0xh6E5c?rel=0&showinfo=0&controls=2" frameborder="0" allowfullscreen></iframe></div>
+	<div class="container">
+	<div class="row ">
+		<div class="fb-like-box col-md-2" data-href="https://www.facebook.com/saMMsCRIthi" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="false" data-show-border="true"></div>
+		<div class="col-md-1" id="twitterfollow">
+		<a href="https://twitter.com/saMMsCRIthi" class="twitter-follow-button" data-show-count="false">Follow @saMMsCRIthi</a>
+		</div>
+		<div class="countdown col-md-4 col-md-offset-1">
+			 {% include countdown %}
+			 to kickoff...
+		 </div>
+		 <div class="col-md-1" id="googlefollow">
+		<g:follow href="https://plus.google.com/101123563998945231284" rel="publisher"></g:follow>
+		</div>
+		 <div id="youtubefollow" class="col-md-1 col-md-offset-1">
+		<div class="g-ytsubscribe" data-channelid="UCz2EAdK3_MAe8PpaL28s5BA" data-layout="full" data-count="hidden"></div>
+		</div>
+	</div>
+	</div>
+	<div id="navplaceholder"></div>
+    <nav><ul class="nav nav-pills" id="mainnav">
+	  <li><a href="#home"><img id="navhomeimg" src="{{ site.baseurl }}/images/logo.png" ></img>Home</a></li>
+	  <li><a href="#events">Events</a></li>
+	  <li><a href="#sponsors">Sponsors</a></li>
+  	  <li><a href="#contact">Contact</a></li>
+          <!-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#about">About us</a></li>
+                  <li><a href="#location">Location</a></li>
+                  <li><a href="#history">History</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>-->
+	</ul></nav>
+  </section>
+  <section id="events">
+  	<div class="sectionhead"><button type="button" class="btn btn-primary btn-lg btn-block">Events</button></div>
+  	<div class="sectioncontent container-fluid">
+  	<div class="row">
+  		<div class="col-md-1"></div>
+  		{% include eventnav %}
+		<div class="col-xs-1"></div>
+		<div id="eventdetails" class="col-xs-8 col-md-9">
+			{% include alleventdetails %}
+		</div>
+	</div>
+  	</div>
+  </section>
+  <section id="sponsors">
+  <div class="sectioncontent ">
+	   <div class="jumbotron">
+		<h1>Become a part of history!</h1>
+		<p class="lead">Sponsors are welcome to take part in this juggernaut of art, music, sports, and wit! </p>
+		<p><a class="btn btn-lg btn-success" href="#contact" role="button">Get in touch</a></p>
+	      </div>
+  </div>
+  </section>
+  <section id="contact">
+  <div class="sectioncontent container">
+  	<div class="row row-centered">
+  	<div class="col-md-4 col-md-offset-4"><p>For all general enquiries</p><button type="button" class="btn btn-danger btn-lg ">sammscrithi@gmail.com</button></div>
+	</div>
+	<br>
+  	<div class="row row-centered">
+  	  {% for cont in site.data.contacts %}
+  	  <div class="person col-md-4"><img src="https://graph.facebook.com/{{ cont.fb }}/picture?type=large&height=200&width=200" alt="{{cont.name}}" class="img-circle" ></img>
+  	  <h4>{{cont.name}}</h4>
+  	  <p><a class="phone" href="tel:+91{{ cont.ph }}">{{cont.ph}}</a></p>
+  	  <p><a href="https://facebook.com/{{cont.fb}}"><img src="{{site.baseurl}}/images/fb.ico"></img></a> <a href="mailto:{{cont.email}}"><img src="{{site.baseurl}}/images/mail.ico"></img></a></p>
+  	 </div>
+  	  {% endfor %}
+	  </div>
+  </div>
+  </section>
+<!--    <section id="about">
+  <div class="sectioncontent">
+	saMMsCRIthi is an annual fest
+  </div>
+  </section>
+    <section id="location">
+  <div class="sectioncontent">
+	JK Grounds
+  </div>
+  </section>
+    <section id="history">
+  <div class="sectioncontent">
+	Long history
+  </div>
+  </section>
+-->
+  <footer id="credits">
+  Made with love and barrels of theophylline by the <a href="https://github.com/sammscrithi">tech committee</a> of saMMsCRIthi. Powered by <a href="https://github.com/">Github</a><img src="{{ site.baseurl }}/images/octocat.jpg" height="20px"></img>
+  </footer>
+  
 	<div id="statistics" style="text-align:center;">
 	{% include ga %}
 	</div>
+	<!-- scripts start here </body> follows -->
+  <script type="text/javascript" src="{{ site.baseurl }}/js/jb-clock.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}/js/beta.js">
+	</script>
   </body>
 </html>

@@ -1,0 +1,578 @@
+- id: fashion-show
+  title: Fashion Show
+  cat: highlights
+  rules:
+  - Thematic fashion show - teams are allowed to choose themes of their interest.
+  - No limit on the number of rounds or themes.
+  - The music should be submitted to the organisers 1 hr prior to when the event begins.
+  - Judgement will be based on Design, Theme, Choreography and Walk.
+  - Obscenity of any sort will not be entertained.
+  - Props are allowed (no hazardous objects like fire, sharp objects, ...)
+  - ‘M’ ramp stage
+  tags: major
+  venue: stage
+  timelimit: "20+5 mins"
+  teamsize: 25 (maximum)
+  org: 
+  - bhavika
+  - anie
+
+- id: group-dance
+  title: Group Dance
+  cat: highlights
+  rules:
+  - Teams should consist of minimum 5, and maximum 15 participants
+  - All dance styles are allowed
+  - Props can be used (No hazardous objects allowed)
+  - Only college teams are allowed (No professional groups allowed)
+  - Participants should submit music, 30mins before the event starts
+  timelimit: 8+2mins
+  org: 
+  - spandana
+  - varush
+  
+- id: mime
+  title: Mime
+  cat: highlights
+  rules:
+  - Only 1 entry per college.
+  - Music is allowed and the act should not contain any any dialogues or lip sync.
+  - Team will be disqualified if act contains any offensive, disrespectful actions or gestures.
+  - Negative points for exceeding time limit.
+  - Props not allowed
+  teamsize: 6+2(including musician)
+  timelimit: 8+2mins
+  org: 
+  - madan
+  - karthik
+- id: skit
+  title: Skit
+  cat: highlights
+  timelimit: 8+2 mins
+  teamsize: Minimum- 5(4+1) and Maximum 8(7+1)
+  rules:
+  - No costumes or props are allowed
+  - Vulgarity will not be entertained-Judge’s decision will be final
+  org:
+  - darshith
+  - pratibha
+
+- id: movie-making
+  title: Movie Making
+  cat: highlights
+  description: A short film making competition
+  rules:
+  - Genre of video  -  Anything, social issue, fiction, romantic, drama,
+  - Type of video  -  video blog, documentary, short story anything that involves camera work. (Sorry nothing like PowerPoint presentations or PhotoStory)
+  - Your submission would be considered valid only if it is accompanying your Name, Designation, College and a suitable caption.
+  - Film should be submitted to us by email before 19th Sept
+  - Copy should be submitted in pendrive on 20th Sept
+  - No professional help should be taken.
+  org:
+  - anup
+  - nikhil
+  
+- id: treasure-hunt
+  title: Treasure Hunt
+  cat: highlights
+  org:
+  - nikh
+  - dayanand
+
+- id: introduction-competition
+  title: Introduction Competition
+  cat: highlights
+  timelimit: 5+3 minutes
+  rules:
+  - Compulsary for all collages participating in the fest. No spot entry
+  - It should comprise most of the participants of the college. The team can perform the mixture of dance, drama, music, powerpoint presentation, videos, etc
+  - The performance should introduce the college to the crowd and promote it.
+  org:
+  - srihari
+  - vinod
+
+- id: spot-dance 
+  title: Spot Dance
+  cat: dance
+  rules:
+  - Minimum of 3 participants
+  - 3 Songs each of 1 minute will be played
+  - Participants will be given a time of 3min for preparation
+  org:
+  - varush
+  - prashasth
+
+- id: solo-dance
+  title: Solo Dance
+  cat: dance
+  description: Classical and Non-Classical Styles (as separate categories)
+  timelimit: 3+2mins
+  rules:
+  - Props are allowed as long as they are not harmful like fire, sharp objects etc.
+  - No vulgarity. Participants will be disqualified if dressed obscenely or the form of dance appears so.
+  - Participants should submit the music tracks 30 min before the event starts.
+  org:
+  - nivedha
+
+- id: pair-dance
+  title: Pair Dance
+  cat: dance
+  teamsize: 2 (boy&girl/ girl&girl/ boy&boy)
+  timelimit: 3+2 mins
+  rules:
+  - Props are allowed
+  - Both should be from same college
+  - No obscenity. If found so, team will be disqualified.
+  org:
+  - sneha
+  - manjunath
+
+- id: solo-singing
+  title: Solo singing
+  cat: music
+  description: Seperate categories - Indian-filmy, Indian non-filmy & Western
+  timelimit: 5+1 minutes
+  rules: 
+  - Karoake allowed
+  - Instruments allowed only if played by the participant.
+  org:
+  - disha
+  - darshitha
+
+- id: group-song
+  title: Group Song
+  cat: music
+  teamsize: 5+5
+  rules:
+  - Karaoke allowed
+  timelimit: 7+1 minutes
+  org:
+  - sriraksha
+  - deepthi
+
+- id: anthakshari-kannada
+  title: Kannada Anthakshari
+  cat: music
+  teamsize: 2
+  rules:
+  - Preliminary round will be a written round.
+  - The top scoring 4 teams will be selected for the finals.
+  org:
+  - vishal 
+  - uday
+
+- id: anthakshari-hindi
+  title: Hindi Anthakshari
+  cat: music
+  teamsize: 2
+  rules:
+  - Standard rules apply
+  - The preliminary round will be a written qualifying round
+  - 6 teams will be qualified for the finals.
+  org:
+  - bhandari
+  - shubham
+
+- id: duet-singing
+  title: Duet Singing
+  cat: music
+  timelimit: 5+1 minutes
+  rules:
+  - Karaoke allowed
+  - Instruments allowed if played on their own
+  org:
+  - kirti
+  - poojag
+
+- id: instrumental-music
+  title: Instrumental music
+  cat: music
+  timelimit: 5+1 minutes
+  rules:
+  - Indian and western categories separate
+  - Participants should get their own instruments
+  - No recording allowed
+  - Solo event
+  - Same participants can participate in both the events
+  org:
+  - manjunath
+  - vineeth
+
+- id: sketching
+  title: Sketching
+  cat: art
+  rules:
+  - Themes will be given on spot
+  - Only sheets will be provided
+  timelimit: 2 hours
+  org:
+  - madhu
+  - arun
+  
+- id: collage
+  title: Collage
+  cat: art
+  teamsize: 3
+  timelimit: 2 hours
+  rules:
+  - Materials- Chart paper will be provided to the participants
+  - The team is allowed to use 15 news papers and 5 magazines
+  - Use of colour papers, scissors and sketch pens not allowed.
+  org:
+  - shubham
+  - meghanan
+  
+- id: mehendi
+  title: Mehendi Competition
+  cat: art
+  org:
+  - pratibha
+  - pooja
+  
+- id: face-painting
+  title: Face Painting
+  teamsize: 2
+  cat: art
+  rules:
+  - Topics will be given on spot
+  - Glitters and accessories should not be used
+  timelimit: 2 hrs
+  org:
+  - rachita
+  - prithvi
+  
+- id: painting
+  title: Painting
+  cat: art
+  rules:
+  - Topics will be given on spot
+  - Only sheets will be provided.
+  - All other necessary material should be brought by the participant.  
+  timelimit: 2 hrs.
+  org: 
+  - meghanakr
+  - aneesha
+
+- id: pot-painting
+  title: Pot Painting
+  cat: art
+  rules:
+  - Topics will be given on spot
+  - Only pots will be provided.
+  - All other necessary material should be brought by the participant.
+  timelimit: 2 hrs.
+  org: 
+  - shamanth
+  - srihari
+  
+- id: rangoli
+  title: Rangoli
+  cat: art
+  teamsize: 3 (max) 
+  timelimit: 2 hrs
+  rules:
+  - Area provided - 5*5 sq feet
+  - Themes will be given on spot
+  - All required materials should be brought by the participants. 
+  - Use of flowers and paints are not allowed
+  org:
+  - akshatha
+  - harshitha
+
+- id: mock-press
+  title: Mock Press
+  cat: literary-on-stage
+  rules:
+  - Entry - single participant
+  - The participant has to speak as the character/personality which is assigned to them for a minute.
+  - No vulgar words are allowed during the speech by the participants.
+  - The speech should be relevant to the character and should involve recent events.
+  - Question and Answer round is for 1.5min alloted to the judges and 1.5min for the audience
+  timelimit: 1+3 - 4 minutes
+  org:
+  - swathi
+  - bharathhr
+  
+- id: extempore-kannada
+  title: Kannada Extempore
+  cat: literary-on-stage
+  rules:
+  - Individual event
+  - Preparation time  - 3mins (as long as the previous participant speaks)
+  - You will be judged based on the use of language, clarity, contents, and entertainment value of your speech.
+  timelimit: 2+1mins
+  org:
+  - saraswati
+  - sangeeta
+  
+- id: extempore-english
+  title: English Extempore
+  cat: literary-on-stage
+  rules:
+  - Individual event
+  - Preparation time  - 3mins (as long as the previous participant speaks)
+  - The speech should be related to the topic given. No speech notes to be used.
+  timelimit: 2+1 minutess
+  org: 
+  - varun
+  - arya
+  
+- id: jam-hindi
+  title: Hindi JAM
+  cat: literary-on-stage
+  rules:
+  - Any number of participants entertained.
+  - All entries must be given within an hour of the event
+  - The event entails 1 round of 5mins for 6  - 7 participants at a time.
+  - Standard JAM rules apply
+  - JAM master is God (or Dr House, if you're on his side)
+  org:
+  - priyadarshi
+  - pramod
+
+- id: jam-kannada
+  title: Kannada JAM  
+  cat: literary-on-stage
+  rules:
+  - Topics will be given on spot
+  - Participants can catch the opponents for any of the following reason  -  late start, grammatical mistake, stammering, pausing, beating around the bush, repetition.
+  - Scoring will be based on spontaneity, humour, creativity, presentation, audience response.
+  org:
+  - nithin
+  - pruthvishree
+  
+- id: jam-english
+  title: English JAM
+  cat: literary-on-stage
+  rules:
+  - Any number of participants entertained.
+  - All entries must be given within an hour of the event
+  - The event entails 1 round of 5mins for 5 participants at a time.
+  - JAM Master is God (or Dr House, if you're on his side)
+  - Finals will be held amongst finalists selected from individual rounds.
+  org:
+  - asd
+  - shruti
+  
+- id: debate-english
+  title: English Debate
+  cat: literary-on-stage
+  teamsize: 2 -  Register as a team of 2 (one opposition, the other proposition)
+  rules:
+  - A list of 20 topics will be put up on the notice board the previous evening.
+  - Participating teams will be assigned topics on the morning of the event by taking lots. One shall speak for the topic, and the other against.
+  - Both members are called onstage simultaneously.
+  - Each member is given 1 min for introduction
+  - 2 mins for rebuttal
+  - 1 min each again, for conclusion
+  timelimit: 6 mins
+  org:
+  - anie
+  - sushruth
+  
+- id: debate-kannada
+  title: Kannada Debate
+  cat: literary-on-stage
+  timelimit : 3+1 mins
+  teamsize: 2
+  rules:
+  - Topics will be given 1 day before itself
+  - The speaker should speak only for or against the topic.
+  org:
+  - manju
+  - akshaybr
+  
+- id: pictionary
+  title: Pictionary
+  cat: literary-off-stage
+  teamsize: 2
+  rules:
+  - 10 teams shall qualify for finals.
+  - Both the members should draw compulsarily
+  - Other general pictionary rules apply
+  org:
+  - terese
+  - irfan
+  
+- id: creative-writing
+  title: Creative Writing 
+  cat: literary-off-stage
+  description: English, Kannada and Hindi categories
+  rules:
+  - Individual event
+  - Any number of participants allowed
+  - word limit of 250 words
+  - Topics will be given on spot
+  - On Spot registrations allowed
+  - Judging based on: creativity, vocabulary, adherence to word limit, topic chosen and presentation.
+  timelimit: 60 minutes
+  org:
+  - shamanth
+  - bharaths
+  
+- id: poetry
+  title: Poetry 
+  cat: literary-off-stage
+  description: English, Kannada, and Hindi categories
+  rules:
+  - It is an individual event
+  - Any number of participants allowed
+  - Word limit: 100 words
+  - Topics will be given on the spot
+  - On spot registrations are allowed
+  - Judging based on: creativity, vocabulary, adherence to word limit, topic chosen and presentation.
+  timelimit: 60 minutes
+  org:
+  - arya
+  - fahad
+
+- id: crossword-kannada
+  title: Kannada Crossword
+  cat: literary-off-stage
+  rules:
+  - The event is an all day event from 9am to 4pm.
+  - The participants should take their crossword puzzle and return it filled within a span of 1 hour from whenever they receive it.
+  - There is no use of using cheating devices.
+  timelimit: 1 hour
+  org:
+  - preetam
+  - vinayh
+  
+- id: case-presentation-competition
+  title: Case Presentation Competition
+  cat: academic
+  rules:
+  - Single person event
+  - The abstract of the case should be submitted before 14th September 2014.
+  timelimit: (4+1)+2+1
+  org:
+  - bhavika
+  - fadnis
+
+  
+- id: quiz-general
+  title: General Quiz
+  cat: academic
+  teamsize: 2 
+  rules:
+  - There will be a preliminary selection round. 
+  - 6 qualifying teams move to final.
+  - The quiz will be on general topics like history, current events, trivia etc
+  - Please bring your own pens and writing pads
+  - Electronic gadgets that help you cheat are not allowed
+  org:
+  - asd
+  - aayushi
+  
+- id: quiz-medical
+  title: Medical Quiz
+  cat: academic
+  nick: Ingenio '14
+  description: State level Inter-collegiate junior medical quiz<br>Subjects  -  Pre and Para  - clinical subjects (Anatomy, Physiology, Biochemistry, Pathology, Microbiology, Pharmacology, Forensic Medicine, Community Medicine)
+  rules:
+  - Participants can be of 1 st /2 nd /3 rd /4 th year MBBS or Interns.
+  - Preliminary round consists of a written test. 
+  - Top 5 teams move on to the final round (oral round)
+  teamsize: 2
+  org:
+  - puneeth
+  - venkatesh
+  
+- id: crossword-medical
+  title: Medical Crossword
+  cat: academic
+  timelimit: 30 minutes
+  teamsize: 2
+  rules:
+  - The team with highest number of answers in the least time will be the winner
+  - In case of a tie star questions will be considered.
+  - Answers with wrong spellings will not be considered. No overwriting.
+  - No use of electronic gadgets, text materials, Bluetooth devices or inter team discussions allowed
+  - Teams indulging in malpractice will be disqualified.
+  org:
+  - thanuja
+  - tusti
+  
+- id: dumb-charades
+  title: Dumb Charades
+  cat: fun
+  teamsize: 3
+  rules:
+  - 6 teams will be selected for the finals, after the prelims.
+  - Standard DC rules apply
+  - All members in the team will have to enact compulsorily.
+  - “Twist” in the finale will be revealed to the finalists.
+  org:
+  - aquib
+  - saraswati
+
+- id: love-letter-writing
+  title: Love Letter writing
+  cat: fun
+  rules:
+  - Write a letter for your loved one in Kannada, English or Hindi and win exciting prizes.
+  - Spot entry
+  org: 
+  - bharaths
+  - priya
+  
+- id: 90-seconds
+  title: 90 Seconds
+  cat: fun
+  teamsize: 2
+  rules:
+  - Answers should be in Yes, No or Maybe
+  - It could be places, monuments, personalities, movies
+  org:
+  - asad
+  - devanshu
+  
+- id: mad-ads
+  title: Mad Ads
+  cat: fun
+  teamsize: 6+2 members
+  timelimit: 6+2 mins
+  rules:
+  - No form of vulgarity will be entertained, and will lead to disqualification of the team.
+  org:
+  - likitesh 
+  - darshith
+  
+- id: sports-fest
+  title: Sports Fest
+  nick: Krieda '14
+  cat: games
+  description: State Level Inter-Medical Collegiate Sports<br>* Volley Ball<br>* Basket Ball<br>* Throw Ball<br>* Short Football
+  rules:
+  - Standard rules apply for all the sport events.
+  - No spot enrtries. All the participants should register before 14th September 2014.
+  - Cash prize and other exciting prizes to be won.
+  Organisers: 
+  - vishal
+  - aquib 
+  - siddharth
+
+- id: fifa11
+  title: FIFA 11
+  cat: games
+  rules:
+  - Each match will be a knockout match.
+  - In semi-finals each match is for 6mins and Finals is for 10mins.
+  - Participants are allowed to bring their owm keyboard and joystick.
+  - Participants losing in the 1st round are allowed to re-enter the tournment by paying the entry fee again.  
+  org: 
+  - hitesh 
+  - samrat
+
+- id: nfs
+  title: NFS - Most Wanted
+  cat: games
+  rules:
+  - Each match will be a knockout match.
+  - Tracks and Cars will be given on spot.
+  - Participants are allowed to bring their owm keyboard.
+  - Participants losing in the 1st round are allowed to re-enter the tournment by paying the entry fee again.
+  org: 
+  - hitesh 
+  - samrat
+  

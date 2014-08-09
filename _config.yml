@@ -4,3 +4,13 @@ pygments: true
 baseurl: /2014
 permalink: /:categories/:title/
 url: http://sammscrithi.in/2014
+eventcats:
+ - highlights
+ - dance
+ - music
+ - art
+ - literary-on-stage
+ - literary-off-stage
+ - academic
+ - fun
+ - games
