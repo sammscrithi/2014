@@ -22,20 +22,40 @@ title: saMMsCRIthi '14
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-responsive.css" rel="stylesheet">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+
     {% include countdownjs %}
     
   </head>
   <body data-spy="scroll" data-target="nav">
+  {% include fbroot %}
   <section id="home">
-  	{% include fbroot %}
-   	<img src='/images/logo.png' width='100px'></img>
+   	<img src='{{ site.baseurl }}/images/logo.png' width='100px'></img>
    	<h1>saMMsCRIthi '14</h1>
 	<h2>The Annual Cultural Extravaganza of Mysore Medical College & Research Institute, Mysore</h2>
 	<div id="promovid">  <iframe width="560" height="315" src="//www.youtube.com/embed/BC2J0xh6E5c?rel=0&showinfo=0&controls=2" frameborder="0" allowfullscreen></iframe></div>
-		 {% include countdown %}
-		 to kickoff...
+	<!-- <div id="leftdance"></div>
+	<div id="rightdance"></div> -->
+	<div class="container">
+	<div class="row ">
+		<div class="fb-like-box col-md-2" data-href="https://www.facebook.com/saMMsCRIthi" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="false" data-show-border="true"></div>
+		<div class="col-md-1" id="twitterfollow">
+		<a href="https://twitter.com/saMMsCRIthi" class="twitter-follow-button" data-show-count="false">Follow @saMMsCRIthi</a>
+		</div>
+		<div class="countdown col-md-4 col-md-offset-1">
+			 {% include countdown %}
+			 to kickoff...
+		 </div>
+		 <div class="col-md-1" id="googlefollow">
+		<g:follow href="https://plus.google.com/101123563998945231284" rel="publisher"></g:follow>
+		</div>
+		 <div id="youtubefollow" class="col-md-1 col-md-offset-1">
+		<div class="g-ytsubscribe" data-channelid="UCz2EAdK3_MAe8PpaL28s5BA" data-layout="full" data-count="hidden"></div>
+		</div>
+	</div>
+	</div>
+	<div id="navplaceholder"></div>
     <nav><ul class="nav nav-pills" id="#mainnav">
-	  <li><a href="#home">Home</a></li>
+	  <li><a href="#home"><img id="navhomeimg" src="{{ site.baseurl }}/images/logo.png" ></img>Home</a></li>
 	  <li><a href="#events">Events</a></li>
 	  <li><a href="#sponsors">Sponsors</a></li>
   	  <li><a href="#contact">Contact</a></li>
@@ -52,7 +72,6 @@ title: saMMsCRIthi '14
                 </ul>
             </li>
 	</ul></nav>
-    
   </section>
   <section id="events">
   	<div class="sectionhead"><button type="button" class="btn btn-primary btn-lg btn-block">Events</button></div>
@@ -61,10 +80,11 @@ title: saMMsCRIthi '14
   		<div class="col-md-1"></div>
   		<div id="eventnav" class="col-xs-4 col-md-2">
   		<ul class="nav nav-pills nav-stacked">
-		  <li class="active"><a href="#">Home</a></li>
-		  <li class="active dropdown">
+  		  <li ><a class="active" href="#fashionshow">Fashion Show</a></li>
+		  <li><a href="#dance">Dance</a></li>
+		  <li class="dropdown">
     			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      			Dropdown <span class="caret"></span>
+      			Dance <span class="caret"></span>
     			</a>
 			    <ul class="dropdown-menu" role="menu">
 			      ...
@@ -75,18 +95,39 @@ title: saMMsCRIthi '14
 		</ul>
 		</div>
 		<div class="col-xs-1"></div>
-		<div id="eventdetails" class="col-xs-8 col-md-9">
-			<div id="fashionshow">Fashion Show</div>
+		<div id="eventdetails" class="col-xs-8 col-md-9" data-spy="scroll" data-target="#eventnav">
+			<div id="fashionshow">Fashion Show
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ 
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ 
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</div><div id="dance">
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+		</div>
 		</div>
 	</div>
   	</div>
   </section>
-	
-	{% comment %}
-<h3>Coming up in...</h3>
-	 {% include countdown %}
-	{% include socialmedia %} 
-	{% endcomment %}
   <section id="sponsors">
   <div class="sectioncontent ">
 	   <div class="jumbotron">
@@ -97,8 +138,25 @@ title: saMMsCRIthi '14
   </div>
   </section>
   <section id="contact">
-  <div class="sectioncontent">
-  	Contact: sammscrithi@gmail.com
+  <div class="sectioncontent container">
+  	<div class="row row-centered">
+  	<div class="col-md-4 col-md-offset-4"><p>For all general enquiries</p><button type="button" class="btn btn-danger btn-lg ">sammscrithi@gmail.com</button></div>
+	</div>
+  	<div class="row row-centered">
+	  	<div class="person col-md-4">
+	  	<img src="https://scontent-b-sjc.xx.fbcdn.net/hphotos-xfa1/t1.0-9/303863_165887810162133_354721165_n.jpg" alt="Abhilash Mayya" class="img-circle"  width="100px"></img>
+	  	<p><a class="phone" href="tel:94949494949">94949494949</a></p>
+	  	</div>
+	  	<div class="person col-md-4">
+	  	<img src="https://scontent-b-sjc.xx.fbcdn.net/hphotos-xfa1/t1.0-9/303863_165887810162133_354721165_n.jpg" alt="Abhilash Mayya" class="img-circle"  width="100px"></img>
+	  	<p><a class="phone" href="tel:94949494949">94949494949</a></p>
+	  	</div>
+<div class="person col-md-4">
+	  	<img src="https://scontent-b-sjc.xx.fbcdn.net/hphotos-xfa1/t1.0-9/303863_165887810162133_354721165_n.jpg" alt="Abhilash Mayya" class="img-circle"  width="100px"></img>
+	  	<p><a class="phone" href="tel:94949494949">94949494949</a></p>
+	  	</div>
+
+	  </div>
   </div>
   </section>
     <section id="about">
@@ -123,52 +181,71 @@ title: saMMsCRIthi '14
 	{% include ga %}
 	</div>
 	<!-- scripts start here </body> follows -->
-	<script type="text/javascript" src="js/scrollspy.js"></script>
 	<script>
-	
-	
 	$(document).ready(function() {
-	
+	var navheight=$('nav').css("height");
+	if($('#navhomeimg').css("left")=="5px"){
+		$("#navplaceholder").css({"height":navheight});
+	}
+	//var eventsheight=$('#events').css("height");
+	if(screen.height>400){
+		$('#eventdetails').css({"height":screen.height-210});
+	}
+	else{
+		$('#eventdetails').css({"height":screen.height-110});
+	}
+
 	function scrollnav() {
 		var scroll = $(this).scrollTop();
 		if (scroll > topdist) {
 			$('nav').css({"position":"fixed","top":"0", "width":"100%","margin":"0 auto"});
+			$("#navhomeimg").css({"display":"block"});
+			$("#navplaceholder").css({"display":"block","height":navheight});
 		} else {
 			$('nav').css({"position":"static","top":"auto"});
+			$("#navhomeimg").css({"display":"none"});
+			$("#navplaceholder").css({"display":"none"});
 		}
+		
 	}
 	
+	function eventscroll(hash){
+		target = $(hash).position().top;
+		$('#eventdetails').animate({
+		scrollTop: target
+		}, 1000);
+	}
 	
 	if(window.location.hash) {
-		var target=$(window.location.hash);
-		window.location.hash='';
-		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      		if (target.length) {
+		if ($(window.location.hash).parent().attr('id') == "eventdetails"){
 			$('html,body').animate({
-			  scrollTop: target.offset().top
-			}, 1000);
+				  scrollTop: $("#events").offset().top
+				}, 1000);
+			eventscroll(window.location.hash);
+		}
+		else{
+			var target=$(window.location.hash);
+			window.location.hash='';
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      		if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top
+				}, 1000);
+			}
 		}
 	} 
 	
 	function changeactive(newactive){
-		console.log('called to activechange'+newactive)
 		$('#mainnav li[class="active"]').removeClass("active");
 		$('#mainnav a[href$="'+newactive+'"]').parent().addClass("active");
 	}
-	window.changeactive=changeactive;
-	var entered;
-	$('section').on('scrollSpy:enter', function() {
-		console.log('enter:', $(this).attr('id'));
-		entered=($(this).attr('id'));
-	});
-	$('section').on('scrollSpy:exit', function() {
-		console.log('exit:', $(this).attr('id'));
-		//changeactive(entered);
-	});
-	$('section').scrollSpy();
+	function changeactiveevent(newactive){
+		$('#eventnav li[class="active"]').removeClass("active");
+		$('#eventnav a[href$="'+newactive+'"]').parent().addClass("active");
+	}
 	
-	$(function() {
-		$('a[href*=#]:not([href=#])').click(function() {
+	$(function() {   //scrolling for the mainnav
+		$('a[href*=#]:not([href=#])').not("#eventnav a").click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 				var target = $(this.hash);
 				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -176,17 +253,42 @@ title: saMMsCRIthi '14
 					$('html,body').animate({
 					scrollTop: target.offset().top
 					}, 1000);
-					changeactive(this.hash)
+					console.log("scrolled to "+target.offset().top);
+					changeactive(this.hash);
 					return false;
 				}
 			}
 		});
 	});
 	
+
+	
+	$(function() {  //scrolling for the eventspane
+		$('#eventnav a[href*=#]:not([href=#])').click(function(event) {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				eventscroll(target);
+				return false;
+			}
+		});
+	});
+	
 	var topDist = $('nav').position();
 	var topdist=topDist.top;
+	
 	scrollnav();
-	$(document).scroll(scrollnav);
+	$(document).scroll(function(){
+		scrollnav();
+	});
+	
+	
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	    po.src = "https://apis.google.com/js/platform.js";
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+	
 });
 	</script>
   </body>
