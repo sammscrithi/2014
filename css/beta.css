@@ -11,6 +11,18 @@ section{
 	text-align:center;
 	background-color:#efefef;
 }
+
+#headerbanner img{
+  margin-top:-60px; 
+  height:190px;
+}
+@media all and (max-width: 520px){
+  #headerbanner img{
+    width:100%;
+    height:auto;
+    margin-top:-30px;
+  }
+}
 #home h1{
 }
 #home h2{
@@ -121,7 +133,7 @@ nav ul{
 #eventnav {
 	padding-left:0px;
 	margin-left:-10px;
-	overflow: auto;
+	overflow-y: scroll;
 }
 
 .nav>div>div>li{
