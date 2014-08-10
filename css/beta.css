@@ -135,7 +135,7 @@ nav ul{
 #eventnav {
 	padding-left:0px;
 	margin-left:-10px;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .nav>div>div>li{
