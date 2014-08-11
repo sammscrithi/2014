@@ -10,19 +10,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-responsive.css" rel="stylesheet">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
-
-
-    <link rel="stylesheet" href="/2014/css/jb-clock.css">
-    
-    <link rel="stylesheet" href="/2014/css/beta.css">
+    <link href="/2014/css/small.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target="nav">
     
@@ -1631,8 +1619,19 @@
 
 	</div>
 	<!-- scripts start here </body> follows -->
-  <script type="text/javascript" src="/2014/js/jb-clock.js"></script>
-	<script type="text/javascript" src="/2014/js/beta.js">
+	<!--<script>
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = '/2014/css/small.css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script> -->
+
+	<script async type="text/javascript" src="/2014/js/c100814.js">
 	</script>
   </body>
 </html>

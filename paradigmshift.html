@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  
+<style>
+  html,body{
+    height:100%;
+    overflow:hidden;
+    background:blue;
+      }
+  section{
+    height:100%;
+    padding:1%;
+    margin: 0;
+    background: red;
+  }
+  .sectioncontent{
+  height:100%;
+    overflow: auto;
+  }
+  #home {
+  	background-color:#efefef;
+  	text-align:center;
+  }
+  #logo{
+    width: 100px;
+  }
+  #headerbanner img{
+  margin-top:-60px; 
+  height:190px;
+}
+@media all and (max-width: 520px){
+  #headerbanner img{
+    width:100%;
+    height:auto;
+    margin-top:-30px;
+  }
+}
+.clock {
+    text-align:center;
+    margin:0 auto;
+}
+.clock_days, .clock_hours, .clock_minutes, .clock_seconds  {
+    display: inline-block;
+}
+.val {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    color:#555;
+    text-align:center;
+    line-height:20px;
+    margin-top:-10px;
+}
+.type_days, .type_hours, .type_minutes, .type_seconds {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align:center;
+    font-size:15px;
+    margin-top:-5px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.type_days{
+    color:#ff6565;
+}
+.type_hours {
+    color:#378cff;
+}
+.type_minutes {
+    color:#9cdb7d;
+}
+.type_seconds {
+    color:#ffdc50;
+}
+  
+</style>
+</head>
+<body>
+  <section id="home">
+    <div class="sectioncontent">
+    <img id="logo" src='/2014/images/logo.png' />
+    <header id="headerbanner">   	<h1>
+  	<img src="/2014/images/backdrop.png" alt="saMMsCRIthi '14"/> 
+    </h1> </header>
+    
+  <div id='timer'>
+        <div class="wrapper">
+        <div class="clock">
+            <!-- Days -->
+            <div class="clock_days">
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type_days">Days</p>
+                    </div>
+            </div>
+            <!-- Days -->
+            <!-- Hours -->
+            <div class="clock_hours">
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type_hours">Hours</p>
+                    </div>
+            </div>
+            <!-- Hours -->
+            <!-- Minutes -->
+            <div class="clock_minutes">
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type_minutes">Minutes</p>
+                    </div>
+            </div>
+            <!-- Minutes -->
+            <!-- Seconds -->
+            <div class="clock_seconds">
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type_seconds">Seconds</p>
+                    </div>
+            </div>
+            <!-- Seconds -->
+        </div>
+        </div><!--/wrapper-->			
+</div>
+
+    <a href=#events>Events</a>
+    
+    </div>
+  </section>
+  <section id="events">
+    <div class="sectioncontent">Events</<div >
+      <a href="#home">Go back home</a>
+    </div>
+  </section>
+</body>
+</html>
