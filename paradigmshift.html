@@ -5,17 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   
+  <script>
+  /*! head.load - v1.0.3 */ (function(n,t){"use strict";function w(){}function u(n,t){if(n){typeof n=="object"&&(n=[].slice.call(n));for(var i=0,r=n.length;i<r;i++)t.call(n,n[i],i)}}function it(n,i){var r=Object.prototype.toString.call(i).slice(8,-1);return i!==t&&i!==null&&r===n}function s(n){return it("Function",n)}function a(n){return it("Array",n)}function et(n){var i=n.split("/"),t=i[i.length-1],r=t.indexOf("?");return r!==-1?t.substring(0,r):t}function f(n){(n=n||w,n._done)||(n(),n._done=1)}function ot(n,t,r,u){var f=typeof n=="object"?n:{test:n,success:!t?!1:a(t)?t:[t],failure:!r?!1:a(r)?r:[r],callback:u||w},e=!!f.test;return e&&!!f.success?(f.success.push(f.callback),i.load.apply(null,f.success)):e||!f.failure?u():(f.failure.push(f.callback),i.load.apply(null,f.failure)),i}function v(n){var t={},i,r;if(typeof n=="object")for(i in n)!n[i]||(t={name:i,url:n[i]});else t={name:et(n),url:n};return(r=c[t.name],r&&r.url===t.url)?r:(c[t.name]=t,t)}function y(n){n=n||c;for(var t in n)if(n.hasOwnProperty(t)&&n[t].state!==l)return!1;return!0}function st(n){n.state=ft;u(n.onpreload,function(n){n.call()})}function ht(n){n.state===t&&(n.state=nt,n.onpreload=[],rt({url:n.url,type:"cache"},function(){st(n)}))}function ct(){var n=arguments,t=n[n.length-1],r=[].slice.call(n,1),f=r[0];return(s(t)||(t=null),a(n[0]))?(n[0].push(t),i.load.apply(null,n[0]),i):(f?(u(r,function(n){s(n)||!n||ht(v(n))}),b(v(n[0]),s(f)?f:function(){i.load.apply(null,r)})):b(v(n[0])),i)}function lt(){var n=arguments,t=n[n.length-1],r={};return(s(t)||(t=null),a(n[0]))?(n[0].push(t),i.load.apply(null,n[0]),i):(u(n,function(n){n!==t&&(n=v(n),r[n.name]=n)}),u(n,function(n){n!==t&&(n=v(n),b(n,function(){y(r)&&f(t)}))}),i)}function b(n,t){if(t=t||w,n.state===l){t();return}if(n.state===tt){i.ready(n.name,t);return}if(n.state===nt){n.onpreload.push(function(){b(n,t)});return}n.state=tt;rt(n,function(){n.state=l;t();u(h[n.name],function(n){f(n)});o&&y()&&u(h.ALL,function(n){f(n)})})}function at(n){n=n||"";var t=n.split("?")[0].split(".");return t[t.length-1].toLowerCase()}function rt(t,i){function e(t){t=t||n.event;u.onload=u.onreadystatechange=u.onerror=null;i()}function o(f){f=f||n.event;(f.type==="load"||/loaded|complete/.test(u.readyState)&&(!r.documentMode||r.documentMode<9))&&(n.clearTimeout(t.errorTimeout),n.clearTimeout(t.cssTimeout),u.onload=u.onreadystatechange=u.onerror=null,i())}function s(){if(t.state!==l&&t.cssRetries<=20){for(var i=0,f=r.styleSheets.length;i<f;i++)if(r.styleSheets[i].href===u.href){o({type:"load"});return}t.cssRetries++;t.cssTimeout=n.setTimeout(s,250)}}var u,h,f;i=i||w;h=at(t.url);h==="css"?(u=r.createElement("link"),u.type="text/"+(t.type||"css"),u.rel="stylesheet",u.href=t.url,t.cssRetries=0,t.cssTimeout=n.setTimeout(s,500)):(u=r.createElement("script"),u.type="text/"+(t.type||"javascript"),u.src=t.url);u.onload=u.onreadystatechange=o;u.onerror=e;u.async=!1;u.defer=!1;t.errorTimeout=n.setTimeout(function(){e({type:"timeout"})},7e3);f=r.head||r.getElementsByTagName("head")[0];f.insertBefore(u,f.lastChild)}function vt(){for(var t,u=r.getElementsByTagName("script"),n=0,f=u.length;n<f;n++)if(t=u[n].getAttribute("data-headjs-load"),!!t){i.load(t);return}}function yt(n,t){var v,p,e;return n===r?(o?f(t):d.push(t),i):(s(n)&&(t=n,n="ALL"),a(n))?(v={},u(n,function(n){v[n]=c[n];i.ready(n,function(){y(v)&&f(t)})}),i):typeof n!="string"||!s(t)?i:(p=c[n],p&&p.state===l||n==="ALL"&&y()&&o)?(f(t),i):(e=h[n],e?e.push(t):e=h[n]=[t],i)}function e(){if(!r.body){n.clearTimeout(i.readyTimeout);i.readyTimeout=n.setTimeout(e,50);return}o||(o=!0,vt(),u(d,function(n){f(n)}))}function k(){r.addEventListener?(r.removeEventListener("DOMContentLoaded",k,!1),e()):r.readyState==="complete"&&(r.detachEvent("onreadystatechange",k),e())}var r=n.document,d=[],h={},c={},ut="async"in r.createElement("script")||"MozAppearance"in r.documentElement.style||n.opera,o,g=n.head_conf&&n.head_conf.head||"head",i=n[g]=n[g]||function(){i.ready.apply(null,arguments)},nt=1,ft=2,tt=3,l=4,p;if(r.readyState==="complete")e();else if(r.addEventListener)r.addEventListener("DOMContentLoaded",k,!1),n.addEventListener("load",e,!1);else{r.attachEvent("onreadystatechange",k);n.attachEvent("onload",e);p=!1;try{p=!n.frameElement&&r.documentElement}catch(wt){}p&&p.doScroll&&function pt(){if(!o){try{p.doScroll("left")}catch(t){n.clearTimeout(i.readyTimeout);i.readyTimeout=n.setTimeout(pt,50);return}e()}}()}i.load=i.js=ut?lt:ct;i.test=ot;i.ready=yt;i.ready(r,function(){y()&&u(h.ALL,function(n){f(n)});i.feature&&i.feature("domloaded",!0)})})(window); /* //# sourceMappingURL=head.load.min.js.map */
+  </script>
+  
 <style>
   html,body{
     height:100%;
     overflow:hidden;
-    background:blue;
+    margin: 0;
       }
   section{
+    padding: 1%;
     height:100%;
-    padding:1%;
-    margin: 0;
-    background: red;
   }
   .sectioncontent{
   height:100%;
@@ -76,7 +78,9 @@
 .type_seconds {
     color:#ffdc50;
 }
-  
+ .event{
+ background: green;
+ } 
 </style>
 </head>
 <body>
@@ -133,7 +137,902 @@
   <section id="events">
     <div class="sectioncontent">Events</<div >
       <a href="#home">Go back home</a>
+      <a href="#fashion-show">Go to first event</a>
     </div>
   </section>
+  
+
+  <section id="fashion-show" class="event highlights">
+  <div class="sectioncontent">
+      <div class="nav"> <a href="#events">Back to events</a> <a href="#group-dance">Group Dance &gt;&gt;&gt; </a></div>  
+  <h4>Fashion Show</h4>
+	
+		
+	Rules:<ul>
+	<li>Thematic fashion show - teams are allowed to choose themes of their interest.</li>
+	<li>No limit on the number of rounds or themes.</li>
+	<li>The music should be submitted to the organisers 1 hr prior to when the event begins.</li>
+	<li>Judgement will be based on Design, Theme, Choreography and Walk.</li>
+	<li>Obscenity of any sort will not be entertained.</li>
+	<li>Props are allowed (no hazardous objects like fire, sharp objects, ...)</li>
+	<li>‘M’ ramp stage</li>
+	</ul>
+	Time limit: 20+5 mins<br>
+	Team size: 25 (maximum)
+	Contact:    <a href="https://facebook.com/bhavika.rv">	Bhavika Vajawat </a>		                                                                                                                                                                                                                                                                                                                                                                                                                               	Anie Joseph 		                                                                                                                                                                                                                	
+  
+  </div>
+</section>  
+
+
+  <section id="group-dance" class="event highlights">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#fashion-show"> &lt;&lt;&lt; Fashion Show</a>  <a href="#events">Back to events</a> <a href="#mime">Mime &gt;&gt;&gt; </a></div>  
+  <h4>Group Dance</h4>
+	
+		
+	Rules:<ul>
+	<li>Teams should consist of minimum 5, and maximum 15 participants</li>
+	<li>All dance styles are allowed</li>
+	<li>Props can be used (No hazardous objects allowed)</li>
+	<li>Only college teams are allowed (No professional groups allowed)</li>
+	<li>Participants should submit music, 30mins before the event starts</li>
+	</ul>
+	Time limit: 8+2mins<br>
+	
+	Contact:        <a href="https://facebook.com/spandanajagannath">	Spandana Jagannath </a>		                                                                                                                                                                                                                                                                                                                               	Varush Rao 		                                                                                                                                                                                                                                                                                                            	
+  
+  </div>
+</section>  
+
+
+  <section id="mime" class="event highlights">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#group-dance"> &lt;&lt;&lt; Group Dance</a>  <a href="#events">Back to events</a> <a href="#skit">Skit &gt;&gt;&gt; </a></div>  
+  <h4>Mime</h4>
+	
+		
+	Rules:<ul>
+	<li>Only 1 entry per college.</li>
+	<li>Music is allowed and the act should not contain any any dialogues or lip sync.</li>
+	<li>Team will be disqualified if act contains any offensive, disrespectful actions or gestures.</li>
+	<li>Negative points for exceeding time limit.</li>
+	<li>Props not allowed</li>
+	</ul>
+	Time limit: 8+2mins<br>
+	Team size: 6+2(including musician)
+	Contact:                	Madan 		                                                                                                                                                                                                                                                                                                                           	Karthik J 		                                                                                                                                                                                                                                                                                                        	
+  
+  </div>
+</section>  
+
+
+  <section id="skit" class="event highlights">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#mime"> &lt;&lt;&lt; Mime</a>  <a href="#events">Back to events</a> <a href="#movie-making">Movie Making &gt;&gt;&gt; </a></div>  
+  <h4>Skit</h4>
+	
+		
+	Rules:<ul>
+	<li>No costumes or props are allowed</li>
+	<li>Vulgarity will not be entertained-Judge’s decision will be final</li>
+	</ul>
+	Time limit: 8+2 mins<br>
+	Team size: Minimum- 5(4+1) and Maximum 8(7+1)
+	Contact:                    	Darshith 		                                                                                                                                                                                                                                                                                                                           	Pratibha Iyer 		                                                                                                                                                                                                                                                                                                    	
+  
+  </div>
+</section>  
+
+
+  <section id="movie-making" class="event highlights">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#skit"> &lt;&lt;&lt; Skit</a>  <a href="#events">Back to events</a> <a href="#treasure-hunt">Treasure Hunt &gt;&gt;&gt; </a></div>  
+  <h4>Movie Making</h4>
+	A short film making competition
+		
+	Rules:<ul>
+	<li>Genre of video  -  Anything, social issue, fiction, romantic, drama,</li>
+	<li>Type of video  -  video blog, documentary, short story anything that involves camera work. (Sorry nothing like PowerPoint presentations or PhotoStory)</li>
+	<li>Your submission would be considered valid only if it is accompanying your Name, Designation, College and a suitable caption.</li>
+	<li>Film should be submitted to us by email before 19th Sept</li>
+	<li>Copy should be submitted in pendrive on 20th Sept</li>
+	<li>No professional help should be taken.</li>
+	</ul>
+	
+	
+	Contact:                                                                    	Anup GK 		                                                                                                                                                                                                                                                                                                                           	Nikhil Reddy 		                                                                                                                                                                                                                                                    	
+  
+  </div>
+</section>  
+
+
+  <section id="treasure-hunt" class="event highlights">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#movie-making"> &lt;&lt;&lt; Movie Making</a>  <a href="#events">Back to events</a> <a href="#introduction-competition">Introduction Competition &gt;&gt;&gt; </a></div>  
+  <h4>Treasure Hunt</h4>
+	
+		
+	
+	
+	
+	Contact:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	
+  
+  </div>
+</section>  
+
+
+  <section id="introduction-competition" class="event highlights">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#treasure-hunt"> &lt;&lt;&lt; Treasure Hunt</a>  <a href="#events">Back to events</a> <a href="#spot-dance">Spot Dance &gt;&gt;&gt; </a></div>  
+  <h4>Introduction Competition</h4>
+	
+		
+	Rules:<ul>
+	<li>Compulsary for all collages participating in the fest. No spot entry</li>
+	<li>It should comprise most of the participants of the college. The team can perform the mixture of dance, drama, music, powerpoint presentation, videos, etc</li>
+	<li>The performance should introduce the college to the crowd and promote it.</li>
+	</ul>
+	Time limit: 5+3 minutes<br>
+	
+	Contact:                                  	SriHari 		                                                                                                                                                                                                                                                                                                                           	Vinod 		                                                                                                                                                                                                                                                                                      	
+  
+  </div>
+</section>  
+
+
+  <section id="spot-dance" class="event dance">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#introduction-competition"> &lt;&lt;&lt; Introduction Competition</a>  <a href="#events">Back to events</a> <a href="#solo-dance">Solo Dance &gt;&gt;&gt; </a></div>  
+  <h4>Spot Dance</h4>
+	
+		
+	Rules:<ul>
+	<li>Minimum of 3 participants</li>
+	<li>3 Songs each of 1 minute will be played</li>
+	<li>Participants will be given a time of 3min for preparation</li>
+	</ul>
+	
+	
+	Contact:              	Varush Rao 		                                                                                                                                                                                                                                                                                                                                                             	Prashasth 		                                                                                                                                                                                                                                                                        	
+  
+  </div>
+</section>  
+
+
+  <section id="solo-dance" class="event dance">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#spot-dance"> &lt;&lt;&lt; Spot Dance</a>  <a href="#events">Back to events</a> <a href="#pair-dance">Pair Dance &gt;&gt;&gt; </a></div>  
+  <h4>Solo Dance</h4>
+	Classical and Non-Classical Styles (as separate categories)
+		
+	Rules:<ul>
+	<li>Props are allowed as long as they are not harmful like fire, sharp objects etc.</li>
+	<li>No vulgarity. Participants will be disqualified if dressed obscenely or the form of dance appears so.</li>
+	<li>Participants should submit the music tracks 30 min before the event starts.</li>
+	</ul>
+	Time limit: 3+2mins<br>
+	
+	Contact:                                                    	Nivedha 		                                                                                                                                                                                                                                                                      	
+  
+  </div>
+</section>  
+
+
+  <section id="pair-dance" class="event dance">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#solo-dance"> &lt;&lt;&lt; Solo Dance</a>  <a href="#events">Back to events</a> <a href="#solo-singing">Solo singing &gt;&gt;&gt; </a></div>  
+  <h4>Pair Dance</h4>
+	
+		
+	Rules:<ul>
+	<li>Props are allowed</li>
+	<li>Both should be from same college</li>
+	<li>No obscenity. If found so, team will be disqualified.</li>
+	</ul>
+	Time limit: 3+2 mins<br>
+	Team size: 2 (boy&girl/ girl&girl/ boy&boy)
+	Contact:                                                      	Sneha Prabhu 		                                                                                                                                                                                                                                                                                                                           	Manjunath S Nayak 		                                                                                                                                                                                                                                                                  	
+  
+  </div>
+</section>  
+
+
+  <section id="solo-singing" class="event music">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#pair-dance"> &lt;&lt;&lt; Pair Dance</a>  <a href="#events">Back to events</a> <a href="#group-song">Group Song &gt;&gt;&gt; </a></div>  
+  <h4>Solo singing</h4>
+	Seperate categories - Indian-filmy, Indian non-filmy & Western
+		
+	Rules:<ul>
+	<li>Karoake allowed</li>
+	<li>Instruments allowed only if played by the participant.</li>
+	</ul>
+	Time limit: 5+1 minutes<br>
+	
+	Contact:                                      	Disha Adiga 		                                                                                                                                                                                                                                                                                                                                                                                                                                                               	Darshitha 		                                                                                                                                              	
+  
+  </div>
+</section>  
+
+
+  <section id="group-song" class="event music">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#solo-singing"> &lt;&lt;&lt; Solo singing</a>  <a href="#events">Back to events</a> <a href="#anthakshari-kannada">Kannada Anthakshari &gt;&gt;&gt; </a></div>  
+  <h4>Group Song</h4>
+	
+		
+	Rules:<ul>
+	<li>Karaoke allowed</li>
+	</ul>
+	Time limit: 7+1 minutes<br>
+	Team size: 5+5
+	Contact:                              	Sriraksha 		                                                                                                                                                                                                                                                                                                                           	Deepthi Krishna 		                                                                                                                                                                                                                                                                                          	
+  
+  </div>
+</section>  
+
+
+  <section id="anthakshari-kannada" class="event music">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#group-song"> &lt;&lt;&lt; Group Song</a>  <a href="#events">Back to events</a> <a href="#anthakshari-hindi">Hindi Anthakshari &gt;&gt;&gt; </a></div>  
+  <h4>Kannada Anthakshari</h4>
+	
+		
+	Rules:<ul>
+	<li>Preliminary round will be a written round.</li>
+	<li>The top scoring 4 teams will be selected for the finals.</li>
+	</ul>
+	
+	Team size: 2
+	Contact:                            	Vishal Padil 		                                                                                                                                                                                                                                                                                                                                     	Uday 		                                                                                                                                                                                                                                                                                  	
+  
+  </div>
+</section>  
+
+
+  <section id="anthakshari-hindi" class="event music">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#anthakshari-kannada"> &lt;&lt;&lt; Kannada Anthakshari</a>  <a href="#events">Back to events</a> <a href="#duet-singing">Duet Singing &gt;&gt;&gt; </a></div>  
+  <h4>Hindi Anthakshari</h4>
+	
+		
+	Rules:<ul>
+	<li>Standard rules apply</li>
+	<li>The preliminary round will be a written qualifying round</li>
+	<li>6 teams will be qualified for the finals.</li>
+	</ul>
+	
+	Team size: 2
+	Contact:                                          	Naveen Bhandari 		                                                                                                                                                                                                                                                                                                                           	Shubham Tripathi 		                                                                                                                                                                                                                                                                              	
+  
+  </div>
+</section>  
+
+
+  <section id="duet-singing" class="event music">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#anthakshari-hindi"> &lt;&lt;&lt; Hindi Anthakshari</a>  <a href="#events">Back to events</a> <a href="#instrumental-music">Instrumental music &gt;&gt;&gt; </a></div>  
+  <h4>Duet Singing</h4>
+	
+		
+	Rules:<ul>
+	<li>Karaoke allowed</li>
+	<li>Instruments allowed if played on their own</li>
+	</ul>
+	Time limit: 5+1 minutes<br>
+	
+	Contact:                                              	Kirti 		                                                                                                                                                                                                                                                                                                                           	Pooja G 		                                                                                                                                                                                                                                                                          	
+  
+  </div>
+</section>  
+
+
+  <section id="instrumental-music" class="event music">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#duet-singing"> &lt;&lt;&lt; Duet Singing</a>  <a href="#events">Back to events</a> <a href="#sketching">Sketching &gt;&gt;&gt; </a></div>  
+  <h4>Instrumental music</h4>
+	
+		
+	Rules:<ul>
+	<li>Indian and western categories separate</li>
+	<li>Participants should get their own instruments</li>
+	<li>No recording allowed</li>
+	<li>Solo event</li>
+	<li>Same participants can participate in both the events</li>
+	</ul>
+	Time limit: 5+1 minutes<br>
+	
+	Contact:                                                        	Manjunath S Nayak 		                                                                                                                                                                                                                                                                                                                           	Vineeth 		                                                                                                                                                                                                                                                                	
+  
+  </div>
+</section>  
+
+
+  <section id="sketching" class="event art">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#instrumental-music"> &lt;&lt;&lt; Instrumental music</a>  <a href="#events">Back to events</a> <a href="#collage">Collage &gt;&gt;&gt; </a></div>  
+  <h4>Sketching</h4>
+	
+		
+	Rules:<ul>
+	<li>Themes will be given on spot</li>
+	<li>Only sheets will be provided</li>
+	</ul>
+	Time limit: 2 hours<br>
+	
+	Contact:                                                            	Madhu Kikkeri 		                                                                                                                                                                                                                                                                                                                           	Arun PT 		                                                                                                                                                                                                                                                            	
+  
+  </div>
+</section>  
+
+
+  <section id="collage" class="event art">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#sketching"> &lt;&lt;&lt; Sketching</a>  <a href="#events">Back to events</a> <a href="#mehendi">Mehendi Competition &gt;&gt;&gt; </a></div>  
+  <h4>Collage</h4>
+	
+		
+	Rules:<ul>
+	<li>Materials- Chart paper will be provided to the participants</li>
+	<li>The team is allowed to use 15 news papers and 5 magazines</li>
+	<li>Use of colour papers, scissors and sketch pens not allowed.</li>
+	</ul>
+	Time limit: 2 hours<br>
+	Team size: 3
+	Contact:                                            	Shubham Tripathi 		                                                                                                                                                                                                                                                                                                                                             	Meghana N 		                                                                                                                                                                                                                                                          	
+  
+  </div>
+</section>  
+
+
+  <section id="mehendi" class="event art">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#collage"> &lt;&lt;&lt; Collage</a>  <a href="#events">Back to events</a> <a href="#face-painting">Face Painting &gt;&gt;&gt; </a></div>  
+  <h4>Mehendi Competition</h4>
+	
+		
+	
+	
+	
+	Contact:                      	Pratibha Iyer 		                                                                                                                                                                                                                                                                                                                                                                     	Pooja 		                                                                                                                                                                                                                                                        	
+  
+  </div>
+</section>  
+
+
+  <section id="face-painting" class="event art">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#mehendi"> &lt;&lt;&lt; Mehendi Competition</a>  <a href="#events">Back to events</a> <a href="#painting">Painting &gt;&gt;&gt; </a></div>  
+  <h4>Face Painting</h4>
+	
+		
+	Rules:<ul>
+	<li>Topics will be given on spot</li>
+	<li>Glitters and accessories should not be used</li>
+	</ul>
+	Time limit: 2 hrs<br>
+	Team size: 2
+	Contact:                                                                        	Rachita 		                                                                                                                                                                                                                                                                                                                           	Prithvi Naveen 		                                                                                                                                                                                                                                                	
+  
+  </div>
+</section>  
+
+
+  <section id="painting" class="event art">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#face-painting"> &lt;&lt;&lt; Face Painting</a>  <a href="#events">Back to events</a> <a href="#pot-painting">Pot Painting &gt;&gt;&gt; </a></div>  
+  <h4>Painting</h4>
+	
+		
+	Rules:<ul>
+	<li>Topics will be given on spot</li>
+	<li>Only sheets will be provided.</li>
+	<li>All other necessary material should be brought by the participant.</li>
+	</ul>
+	Time limit: 2 hrs.<br>
+	
+	Contact:                                                                            	Meghana K R 		                                                                                                                                                                                                                                                                                                                           	Aneesha 		                                                                                                                                                                                                                                            	
+  
+  </div>
+</section>  
+
+
+  <section id="pot-painting" class="event art">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#painting"> &lt;&lt;&lt; Painting</a>  <a href="#events">Back to events</a> <a href="#rangoli">Rangoli &gt;&gt;&gt; </a></div>  
+  <h4>Pot Painting</h4>
+	
+		
+	Rules:<ul>
+	<li>Topics will be given on spot</li>
+	<li>Only pots will be provided.</li>
+	<li>All other necessary material should be brought by the participant.</li>
+	</ul>
+	Time limit: 2 hrs.<br>
+	
+	Contact:                                                                                	Shamanth Hiremath 		                                                                                                                                                                                                                                                                           	SriHari 		                                                                                                                                                                                                                                                                                        	
+  
+  </div>
+</section>  
+
+
+  <section id="rangoli" class="event art">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#pot-painting"> &lt;&lt;&lt; Pot Painting</a>  <a href="#events">Back to events</a> <a href="#mock-press">Mock Press &gt;&gt;&gt; </a></div>  
+  <h4>Rangoli</h4>
+	
+		
+	Rules:<ul>
+	<li>Area provided - 5*5 sq feet</li>
+	<li>Themes will be given on spot</li>
+	<li>All required materials should be brought by the participants.</li>
+	<li>Use of flowers and paints are not allowed</li>
+	</ul>
+	Time limit: 2 hrs<br>
+	Team size: 3 (max)
+	Contact:                                                                                  	Akshatha 		                                                                                                                                                                                                                                                                                                                           	Harshitha C 		                                                                                                                                                                                                                                      	
+  
+  </div>
+</section>  
+
+
+  <section id="mock-press" class="event literary-on-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#rangoli"> &lt;&lt;&lt; Rangoli</a>  <a href="#events">Back to events</a> <a href="#extempore-kannada">Kannada Extempore &gt;&gt;&gt; </a></div>  
+  <h4>Mock Press</h4>
+	
+		
+	Rules:<ul>
+	<li>Entry - single participant</li>
+	<li>The participant has to speak as the character/personality which is assigned to them for a minute.</li>
+	<li>No vulgar words are allowed during the speech by the participants.</li>
+	<li>The speech should be relevant to the character and should involve recent events.</li>
+	<li>Question and Answer round is for 1.5min alloted to the judges and 1.5min for the audience</li>
+	</ul>
+	Time limit: 1+3 - 4 minutes<br>
+	
+	Contact:                                                                                      	Swathi SB 		                                                                                                                                                                                                                                                                                                                           	Bharath HR 		                                                                                                                                                                                                                                  	
+  
+  </div>
+</section>  
+
+
+  <section id="extempore-kannada" class="event literary-on-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#mock-press"> &lt;&lt;&lt; Mock Press</a>  <a href="#events">Back to events</a> <a href="#extempore-english">English Extempore &gt;&gt;&gt; </a></div>  
+  <h4>Kannada Extempore</h4>
+	
+		
+	Rules:<ul>
+	<li>Individual event</li>
+	<li>Preparation time  - 3mins (as long as the previous participant speaks)</li>
+	<li>You will be judged based on the use of language, clarity, contents, and entertainment value of your speech.</li>
+	</ul>
+	Time limit: 2+1mins<br>
+	
+	Contact:                                                                                          	Saraswati Holla 		                                                                                                                                                                                                                                                                                                                           	Sangeeta 		                                                                                                                                                                                                                              	
+  
+  </div>
+</section>  
+
+
+  <section id="extempore-english" class="event literary-on-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#extempore-kannada"> &lt;&lt;&lt; Kannada Extempore</a>  <a href="#events">Back to events</a> <a href="#jam-hindi">Hindi JAM &gt;&gt;&gt; </a></div>  
+  <h4>English Extempore</h4>
+	
+		
+	Rules:<ul>
+	<li>Individual event</li>
+	<li>Preparation time  - 3mins (as long as the previous participant speaks)</li>
+	<li>The speech should be related to the topic given. No speech notes to be used.</li>
+	</ul>
+	Time limit: 2+1 minutess<br>
+	
+	Contact:                                                                                              	Varun Kulkarni 		                                                                                                                                                                                                                                                                                                                           	Arya 		                                                                                                                                                                                                                          	
+  
+  </div>
+</section>  
+
+
+  <section id="jam-hindi" class="event literary-on-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#extempore-english"> &lt;&lt;&lt; English Extempore</a>  <a href="#events">Back to events</a> <a href="#jam-kannada">Kannada JAM &gt;&gt;&gt; </a></div>  
+  <h4>Hindi JAM</h4>
+	
+		
+	Rules:<ul>
+	<li>Any number of participants entertained.</li>
+	<li>All entries must be given within an hour of the event</li>
+	<li>The event entails 1 round of 5mins for 6  - 7 participants at a time.</li>
+	<li>Standard JAM rules apply</li>
+	<li>JAM master is God (or Dr House, if you're on his side)</li>
+	</ul>
+	
+	
+	Contact:                                                                                                  	Priyadarshi 		                                                                                                                                                                                                                                                                                                                           	Pramod 		                                                                                                                                                                                                                      	
+  
+  </div>
+</section>  
+
+
+  <section id="jam-kannada" class="event literary-on-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#jam-hindi"> &lt;&lt;&lt; Hindi JAM</a>  <a href="#events">Back to events</a> <a href="#jam-english">English JAM &gt;&gt;&gt; </a></div>  
+  <h4>Kannada JAM</h4>
+	
+		
+	Rules:<ul>
+	<li>Topics will be given on spot</li>
+	<li>Participants can catch the opponents for any of the following reason  -  late start, grammatical mistake, stammering, pausing, beating around the bush, repetition.</li>
+	<li>Scoring will be based on spontaneity, humour, creativity, presentation, audience response.</li>
+	</ul>
+	
+	
+	Contact:                                                                                                      	Nithin NJ 		                                                                                                                                                                                                                                                                                                                           	Pruthvishree 		                                                                                                                                                                                                                  	
+  
+  </div>
+</section>  
+
+
+  <section id="jam-english" class="event literary-on-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#jam-kannada"> &lt;&lt;&lt; Kannada JAM</a>  <a href="#events">Back to events</a> <a href="#debate-english">English Debate &gt;&gt;&gt; </a></div>  
+  <h4>English JAM</h4>
+	
+		
+	Rules:<ul>
+	<li>Any number of participants entertained.</li>
+	<li>All entries must be given within an hour of the event</li>
+	<li>The event entails 1 round of 5mins for 5 participants at a time.</li>
+	<li>JAM Master is God (or Dr House, if you're on his side)</li>
+	<li>Finals will be held amongst finalists selected from individual rounds.</li>
+	</ul>
+	
+	
+	Contact:      	Akshay S Dinesh 		                                                                                                                                                                                                                                                                                                                                                                                                                                 	Shruti Parimoo 		                                                                                                                                                                                                            	
+  
+  </div>
+</section>  
+
+
+  <section id="debate-english" class="event literary-on-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#jam-english"> &lt;&lt;&lt; English JAM</a>  <a href="#events">Back to events</a> <a href="#debate-kannada">Kannada Debate &gt;&gt;&gt; </a></div>  
+  <h4>English Debate</h4>
+	
+		
+	Rules:<ul>
+	<li>A list of 20 topics will be put up on the notice board the previous evening.</li>
+	<li>Participating teams will be assigned topics on the morning of the event by taking lots. One shall speak for the topic, and the other against.</li>
+	<li>Both members are called onstage simultaneously.</li>
+	<li>Each member is given 1 min for introduction</li>
+	<li>2 mins for rebuttal</li>
+	<li>1 min each again, for conclusion</li>
+	</ul>
+	Time limit: 6 mins<br>
+	Team size: 2 -  Register as a team of 2 (one opposition, the other proposition)
+	Contact:                                                                                                          	Anie Joseph 		                                                                                                                                                                                                                                                                                                                           	Sushruth 		                                                                                                                                                                                                              	
+  
+  </div>
+</section>  
+
+
+  <section id="debate-kannada" class="event literary-on-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#debate-english"> &lt;&lt;&lt; English Debate</a>  <a href="#events">Back to events</a> <a href="#pictionary">Pictionary &gt;&gt;&gt; </a></div>  
+  <h4>Kannada Debate</h4>
+	
+		
+	Rules:<ul>
+	<li>Topics will be given 1 day before itself</li>
+	<li>The speaker should speak only for or against the topic.</li>
+	</ul>
+	Time limit: 3+1 mins<br>
+	Team size: 2
+	Contact:                                                                                                                	Manju Bhargav 		                                                                                                                                                                                                                                                                                                                           	Akshay BR 		                                                                                                                                                                                                        	
+  
+  </div>
+</section>  
+
+
+  <section id="pictionary" class="event literary-off-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#debate-kannada"> &lt;&lt;&lt; Kannada Debate</a>  <a href="#events">Back to events</a> <a href="#creative-writing">Creative Writing &gt;&gt;&gt; </a></div>  
+  <h4>Pictionary</h4>
+	
+		
+	Rules:<ul>
+	<li>10 teams shall qualify for finals.</li>
+	<li>Both the members should draw compulsarily</li>
+	<li>Other general pictionary rules apply</li>
+	</ul>
+	
+	Team size: 2
+	Contact:                                                                                                                    	Terese Jose 		                                                                                                                                                                                                                                                                                                                           	Irfan 		                                                                                                                                                                                                    	
+  
+  </div>
+</section>  
+
+
+  <section id="creative-writing" class="event literary-off-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#pictionary"> &lt;&lt;&lt; Pictionary</a>  <a href="#events">Back to events</a> <a href="#poetry">Poetry &gt;&gt;&gt; </a></div>  
+  <h4>Creative Writing</h4>
+	English, Kannada and Hindi categories
+		
+	Rules:<ul>
+	<li>Individual event</li>
+	<li>Any number of participants allowed</li>
+	<li>word limit of 250 words</li>
+	<li>Topics will be given on spot</li>
+	<li>On Spot registrations allowed</li>
+	<li>{"Judging based on"=>"creativity, vocabulary, adherence to word limit, topic chosen and presentation."}</li>
+	</ul>
+	Time limit: 60 minutes<br>
+	
+	Contact:                                                                                	Shamanth Hiremath 		                                                                                                                                                                                                                                                                                                                                                                 	Bharath Shiva 		                                                                                                                                                                                                  	
+  
+  </div>
+</section>  
+
+
+  <section id="poetry" class="event literary-off-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#creative-writing"> &lt;&lt;&lt; Creative Writing</a>  <a href="#events">Back to events</a> <a href="#crossword-kannada">Kannada Crossword &gt;&gt;&gt; </a></div>  
+  <h4>Poetry</h4>
+	English, Kannada, and Hindi categories
+		
+	Rules:<ul>
+	<li>It is an individual event</li>
+	<li>Any number of participants allowed</li>
+	<li>{"Word limit"=>"100 words"}</li>
+	<li>Topics will be given on the spot</li>
+	<li>On spot registrations are allowed</li>
+	<li>{"Judging based on"=>"creativity, vocabulary, adherence to word limit, topic chosen and presentation."}</li>
+	</ul>
+	Time limit: 60 minutes<br>
+	
+	Contact:                                                                                                	Arya 		                                                                                                                                                                                                                                                                                                                                                   	Fahad 		                                                                                                                                                                                                	
+  
+  </div>
+</section>  
+
+
+  <section id="crossword-kannada" class="event literary-off-stage">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#poetry"> &lt;&lt;&lt; Poetry</a>  <a href="#events">Back to events</a> <a href="#case-presentation-competition">Case Presentation Competition &gt;&gt;&gt; </a></div>  
+  <h4>Kannada Crossword</h4>
+	
+		
+	Rules:<ul>
+	<li>The event is an all day event from 9am to 4pm.</li>
+	<li>The participants should take their crossword puzzle and return it filled within a span of 1 hour from whenever they receive it.</li>
+	<li>There is no use of using cheating devices.</li>
+	</ul>
+	Time limit: 1 hour<br>
+	
+	Contact:                                                                                                                            	Preetam 		                                                                                                                                                                                                                                                                                                                           	Vinay H 		                                                                                                                                                                                            	
+  
+  </div>
+</section>  
+
+
+  <section id="case-presentation-competition" class="event academic">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#crossword-kannada"> &lt;&lt;&lt; Kannada Crossword</a>  <a href="#events">Back to events</a> <a href="#quiz-general">General Quiz &gt;&gt;&gt; </a></div>  
+  <h4>Case Presentation Competition</h4>
+	
+		
+	Rules:<ul>
+	<li>Single person event</li>
+	<li>The abstract of the case should be submitted before 14th September 2014.</li>
+	</ul>
+	Time limit: (4+1)+2+1<br>
+	
+	Contact:    <a href="https://facebook.com/bhavika.rv">	Bhavika Vajawat </a>		                                                                                                                                                                                                                                                                                                                                                                                                                                                               	Akshay Fadnis 		                                                                                                                                                                                	
+  
+  </div>
+</section>  
+
+
+  <section id="quiz-general" class="event academic">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#case-presentation-competition"> &lt;&lt;&lt; Case Presentation Competition</a>  <a href="#events">Back to events</a> <a href="#quiz-medical">Medical Quiz &gt;&gt;&gt; </a></div>  
+  <h4>General Quiz</h4>
+	
+		
+	Rules:<ul>
+	<li>There will be a preliminary selection round.</li>
+	<li>6 qualifying teams move to final.</li>
+	<li>The quiz will be on general topics like history, current events, trivia etc</li>
+	<li>Please bring your own pens and writing pads</li>
+	<li>Electronic gadgets that help you cheat are not allowed</li>
+	</ul>
+	
+	Team size: 2
+	Contact:      	Akshay S Dinesh 		                                                                                                                                                                                                                                                                                                                                                                                                                                                   	Aayushi Mishra 		                                                                                                                                                                                          	
+  
+  </div>
+</section>  
+
+
+  <section id="quiz-medical" class="event academic">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#quiz-general"> &lt;&lt;&lt; General Quiz</a>  <a href="#events">Back to events</a> <a href="#crossword-medical">Medical Crossword &gt;&gt;&gt; </a></div>  
+  <h4>Medical Quiz</h4>
+	State level Inter-collegiate junior medical quiz<br>Subjects  -  Pre and Para  - clinical subjects (Anatomy, Physiology, Biochemistry, Pathology, Microbiology, Pharmacology, Forensic Medicine, Community Medicine)
+		
+	Rules:<ul>
+	<li>Participants can be of 1 st /2 nd /3 rd /4 th year MBBS or Interns.</li>
+	<li>Preliminary round consists of a written test.</li>
+	<li>Top 5 teams move on to the final round (oral round)</li>
+	</ul>
+	
+	Team size: 2
+	Contact:                                                                                                                                  	Puneeth Pai 		                                                                                                                                                                                                                                                                                                                           	Venkatesh Darshan 		                                                                                                                                                                                      	
+  
+  </div>
+</section>  
+
+
+  <section id="crossword-medical" class="event academic">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#quiz-medical"> &lt;&lt;&lt; Medical Quiz</a>  <a href="#events">Back to events</a> <a href="#dumb-charades">Dumb Charades &gt;&gt;&gt; </a></div>  
+  <h4>Medical Crossword</h4>
+	
+		
+	Rules:<ul>
+	<li>The team with highest number of answers in the least time will be the winner</li>
+	<li>In case of a tie star questions will be considered.</li>
+	<li>Answers with wrong spellings will not be considered. No overwriting.</li>
+	<li>No use of electronic gadgets, text materials, Bluetooth devices or inter team discussions allowed</li>
+	<li>Teams indulging in malpractice will be disqualified.</li>
+	</ul>
+	Time limit: 30 minutes<br>
+	Team size: 2
+	Contact:                                                                                                                                      	Thanuja 		                                                                                                                                                                                                                                                                                                                           	Tusti Kumari 		                                                                                                                                                                                  	
+  
+  </div>
+</section>  
+
+
+  <section id="dumb-charades" class="event fun">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#crossword-medical"> &lt;&lt;&lt; Medical Crossword</a>  <a href="#events">Back to events</a> <a href="#love-letter-writing">Love Letter writing &gt;&gt;&gt; </a></div>  
+  <h4>Dumb Charades</h4>
+	
+		
+	Rules:<ul>
+	<li>6 teams will be selected for the finals, after the prelims.</li>
+	<li>Standard DC rules apply</li>
+	<li>All members in the team will have to enact compulsorily.</li>
+	<li>“Twist” in the finale will be revealed to the finalists.</li>
+	</ul>
+	
+	Team size: 3
+	Contact:                          	Aquib Pasha 		                                                                                                                                                                                                                                                                                                                                                                                         	Saraswati Holla 		                                                                                                                                                                                                                                	
+  
+  </div>
+</section>  
+
+
+  <section id="love-letter-writing" class="event fun">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#dumb-charades"> &lt;&lt;&lt; Dumb Charades</a>  <a href="#events">Back to events</a> <a href="#90-seconds">90 Seconds &gt;&gt;&gt; </a></div>  
+  <h4>Love Letter writing</h4>
+	
+		
+	Rules:<ul>
+	<li>Write a letter for your loved one in Kannada, English or Hindi and win exciting prizes.</li>
+	<li>Spot entry</li>
+	</ul>
+	
+	
+	Contact:                                                                                                                        	Bharath Shiva 		                                                                                                                                                                                                                                                                                                                                                                                                                       	Priya 		                                                                                                    	
+  
+  </div>
+</section>  
+
+
+  <section id="90-seconds" class="event fun">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#love-letter-writing"> &lt;&lt;&lt; Love Letter writing</a>  <a href="#events">Back to events</a> <a href="#mad-ads">Mad Ads &gt;&gt;&gt; </a></div>  
+  <h4>90 Seconds</h4>
+	
+		
+	Rules:<ul>
+	<li>Answers should be in Yes, No or Maybe</li>
+	<li>It could be places, monuments, personalities, movies</li>
+	</ul>
+	
+	Team size: 2
+	Contact:                                                                                                                                            	Asad Ahmed 		                                                                                                                                                                                                                                                                                                                           	Devanshu Gupta 		                                                                                                                                                                            	
+  
+  </div>
+</section>  
+
+
+  <section id="mad-ads" class="event fun">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#90-seconds"> &lt;&lt;&lt; 90 Seconds</a>  <a href="#events">Back to events</a> <a href="#sports-fest">Sports Fest &gt;&gt;&gt; </a></div>  
+  <h4>Mad Ads</h4>
+	
+		
+	Rules:<ul>
+	<li>No form of vulgarity will be entertained, and will lead to disqualification of the team.</li>
+	</ul>
+	Time limit: 6+2 mins<br>
+	Team size: 6+2 members
+	Contact:                                                                                                                                                	Likitesh 		                                                                                                                                                                                             	Darshith 		                                                                                                                                                                                                                                                                                                      	
+  
+  </div>
+</section>  
+
+
+  <section id="sports-fest" class="event games">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#mad-ads"> &lt;&lt;&lt; Mad Ads</a>  <a href="#events">Back to events</a> <a href="#fifa11">FIFA 11 &gt;&gt;&gt; </a></div>  
+  <h4>Sports Fest</h4>
+	State Level Inter-Medical Collegiate Sports<br>* Volley Ball<br>* Basket Ball<br>* Throw Ball<br>* Short Football
+		
+	Rules:<ul>
+	<li>Standard rules apply for all the sport events.</li>
+	<li>No spot enrtries. All the participants should register before 14th September 2014.</li>
+	<li>Cash prize and other exciting prizes to be won.</li>
+	</ul>
+	
+	
+	
+  
+  </div>
+</section>  
+
+
+  <section id="fifa11" class="event games">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#sports-fest"> &lt;&lt;&lt; Sports Fest</a>  <a href="#events">Back to events</a> <a href="#nfs">NFS - Most Wanted &gt;&gt;&gt; </a></div>  
+  <h4>FIFA 11</h4>
+	
+		
+	Rules:<ul>
+	<li>Each match will be a knockout match.</li>
+	<li>In semi-finals each match is for 6mins and Finals is for 10mins.</li>
+	<li>Participants are allowed to bring their owm keyboard and joystick.</li>
+	<li>Participants losing in the 1st round are allowed to re-enter the tournment by paying the entry fee again.</li>
+	</ul>
+	
+	
+	Contact:          	Hitesh Byatroy 		                                                                                                                                                                                                                                                                                                                           	Samrat Hegde 		                                                                                                                                                                                                                                                                                                              	
+  
+  </div>
+</section>  
+
+
+  <section id="nfs" class="event games">
+  <div class="sectioncontent">
+      <div class="nav"><a href="#fifa11"> &lt;&lt;&lt; FIFA 11</a>  <a href="#events">Back to events</a> </div>  
+  <h4>NFS - Most Wanted</h4>
+	
+		
+	Rules:<ul>
+	<li>Each match will be a knockout match.</li>
+	<li>Tracks and Cars will be given on spot.</li>
+	<li>Participants are allowed to bring their owm keyboard.</li>
+	<li>Participants losing in the 1st round are allowed to re-enter the tournment by paying the entry fee again.</li>
+	</ul>
+	
+	
+	Contact:          	Hitesh Byatroy 		                                                                                                                                                                                                                                                                                                                           	Samrat Hegde 		                                                                                                                                                                                                                                                                                                              	
+  
+  </div>
+</section>  
+
+
+  <script>
+    head.load("/2014/css/pssmall.css");
+    head.load("/2014/js/jb-clock.js")
+  </script>
 </body>
 </html>
