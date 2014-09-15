@@ -8,6 +8,7 @@ section{
 }
 
 #home{
+	padding-top: 40px;
 	text-align:center;
 	background-color:#efefef;
 }
@@ -41,6 +42,10 @@ section{
 
 #twitterfollow, #googlefollow{
 	margin-top:25px;
+}
+
+#socialrow{
+	margin-top: 20px;
 }
 
 
@@ -202,6 +207,11 @@ nav ul{
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
+}
+
+#schedule{
+	background: aqua;
+	text-align: center;
 }
 
 
