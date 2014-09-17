@@ -199,4 +199,6 @@
 
 //isotope ends
 
+$(function() { $(".isotope img").lazyload( {effect: "fadeIn"} ); });
+
 });
