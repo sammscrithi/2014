@@ -101,6 +101,7 @@ body {
   position: relative;
   float: left;
   width: 20%;
+  min-width: 280px;
   height: 100px; 
   margin: 5px;
   padding: 10px;
