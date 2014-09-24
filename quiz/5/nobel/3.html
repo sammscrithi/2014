@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Rendered with Eco -->
+  <meta charset="utf-8" />
+
+  <!-- Site Properities -->
+  <title>quizwiz</title>
+  <meta name="description" content="This is the quiz that happened in saMMsCRIthi '14'" />
+  <meta name="keywords" content="quiz,general,knowledge" />
+
+  <!-- DocPad Meta -->
+  <meta name="generator" content="DocPad v6.56.0" />
+
+  <!-- DocPad Styles + Our Own -->
+  <style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/2014/quiz/main.css" /><link  rel="stylesheet" href="/jquery-ui.css" />
+</head>
+<body>
+  <header>
+    
+  </header>
+  <article>
+    <div class="questionpage">
+<h1> </h1>
+<p>Literature - Swedish Academy
+Physics, Chemistry, Economics - Royal Swedish Academy of Sciences
+Peace - Norwegian Nobel Committee
+Physiology - ?</p>
+
+    <script>
+var url = window.location.href;
+if (url.substr(-1) == '/') url = url.substr(0, url.length - 1);
+url = url.split('/');
+currq=url.pop();
+currqno=currq.substr(1)
+var nextprefix = url.join('/');
+nextprefix+="/";
+var answer=nextprefix+"a"+(currqno);
+var nextquestion=nextprefix+"q"+(Number(currqno)+1);
+document.write('<p><a href="' + answer + '">Answer</a> ');
+document.write('<a href="' + nextquestion + '">Next question</a></p> ');
+document.write('<p><a href="' + nextprefix + '">Round home</a> ');
+document.write('<a href="' + "/home/" + '">Home</a></p>');
+</script>
+</div>
+  </article>
+
+  <!-- DocPad Scripts + Our Own -->
+  <script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="/main.js"></script><script defer="defer"  src="/jquery.js"></script><script defer="defer"  src="/jquery-ui.js"></script><script defer="defer"  src="/scores.js"></script>
+</body>
+</html>

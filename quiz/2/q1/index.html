@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Rendered with Eco -->
+  <meta charset="utf-8" />
+
+  <!-- Site Properities -->
+  <title>quizwiz</title>
+  <meta name="description" content="This is the quiz that happened in saMMsCRIthi '14'" />
+  <meta name="keywords" content="quiz,general,knowledge" />
+
+  <!-- DocPad Meta -->
+  <meta name="generator" content="DocPad v6.56.0" />
+
+  <!-- DocPad Styles + Our Own -->
+  <link  rel="stylesheet" href="/2014/quiz/main.css" /><link  rel="stylesheet" href="/jquery-ui.css" />
+</head>
+<body>
+  <header>
+    
+  </header>
+  <article>
+    <div class="questionpage">
+<h1> </h1>
+<p><img src="../../images/svc/1/mix.jpg" height="600px"></img></p>
+
+    <script>
+var url = window.location.href;
+if (url.substr(-1) == '/') url = url.substr(0, url.length - 1);
+url = url.split('/');
+currq=url.pop();
+currqno=currq.substr(1)
+var nextprefix = url.join('/');
+nextprefix+="/";
+var answer=nextprefix+"a"+(currqno);
+var nextquestion=nextprefix+"q"+(Number(currqno)+1);
+document.write('<p><a href="' + answer + '">Answer</a> ');
+document.write('<a href="' + nextquestion + '">Next question</a></p> ');
+document.write('<p><a href="' + nextprefix + '">Round home</a> ');
+document.write('<a href="' + "/home/" + '">Home</a></p>');
+</script>
+</div>
+  </article>
+
+  <!-- DocPad Scripts + Our Own -->
+  <script defer="defer"  src="/main.js"></script><script defer="defer"  src="/jquery.js"></script><script defer="defer"  src="/jquery-ui.js"></script><script defer="defer"  src="/scores.js"></script>
+</body>
+</html>

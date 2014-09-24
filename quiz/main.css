@@ -1,0 +1,29 @@
+/**
+ * CSS for quizwiz
+ */
+
+body{
+	background-color: blanchedalmond;
+	text-align: center;
+	font: Helvetica;
+	font-size: 2em;
+}
+.questionspage{
+	text-align: justify;
+}
+
+a{
+	background-color: wheat;
+	text-decoration: none;
+}
+a:hover{
+	background-color: white;
+}
+
+.hovered {
+    background-color: #ffdf00;
+}
+
+img {
+	float:left;
+}

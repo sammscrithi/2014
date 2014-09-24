@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Rendered with Eco -->
+  <meta charset="utf-8" />
+
+  <!-- Site Properities -->
+  <title>quizwiz</title>
+  <meta name="description" content="This is the quiz that happened in saMMsCRIthi '14'" />
+  <meta name="keywords" content="quiz,general,knowledge" />
+
+  <!-- DocPad Meta -->
+  <meta name="generator" content="DocPad v6.56.0" />
+
+  <!-- DocPad Styles + Our Own -->
+  <link  rel="stylesheet" href="/2014/quiz/main.css" /><link  rel="stylesheet" href="/jquery-ui.css" />
+</head>
+<body>
+  <header>
+    
+  </header>
+  <article>
+    <div class="questionpage"><div id="countdown">45</div>
+<h1> </h1>
+<div style="text-align:left; padding-left:30px;">
+<ol>
+<li>Chattrapati Shivaji ruled the ........... empire.</li>
+<li>Who was the winner of 2014 Pro Kabbadi League?</li>
+<li>In which state of India do you find the Silent Valley National Park?</li>
+<li>...........&#39;s principle: &quot;for an inviscid flow of a nonconducting fluid, an increase in the speed of the fluid occurs simultaneously with a decrease in pressure or a decrease in the fluid&#39;s potential energy.&quot;</li>
+<li>&quot;Tyres With Muscle&quot;. Tagline of ?</li>
+<li>Complete the proverb: &quot;..... .... ... .... .... in one basket.&quot;</li>
+<li>What is hippopotomonstrosesquipedaliophobia</li>
+<li>What is the familiar Latin phrase meaning &quot;With great praise&quot;?</li>
+</ol>
+
+</div>
+    <script>
+
+function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
+
+function ctd(){
+	var countdown=document.getElementById("countdown");
+	var currstate=countdown.innerHTML;
+	if (isNumber(currstate)){
+		if (Number(currstate)>0){
+			var nextnum=Number(currstate)-1;
+			countdown.innerHTML=nextnum;
+		}
+		else{
+			countdown.innerHTML="Time up!";
+		}
+	}
+}
+
+var t=setInterval(ctd,1000);
+
+
+var url = window.location.href;
+if (url.substr(-1) == '/') url = url.substr(0, url.length - 1);
+url = url.split('/');
+currq=url.pop();
+currqno=currq.substr(1)
+var nextprefix = url.join('/');
+nextprefix+="/";
+var answer=nextprefix+"a"+(currqno);
+var nextquestion=nextprefix+"q"+(Number(currqno)+1);
+document.write('<p><a href="' + answer + '">Answer</a> ');
+//document.write('<a href="' + nextquestion + '">Next question</a></p> ');
+document.write('<p><a href="' + nextprefix + '">Round home</a> ');
+document.write('<a href="' + "/home/" + '">Home</a></p>');
+</script>
+</div>
+  </article>
+
+  <!-- DocPad Scripts + Our Own -->
+  <script defer="defer"  src="/main.js"></script><script defer="defer"  src="/jquery.js"></script><script defer="defer"  src="/jquery-ui.js"></script><script defer="defer"  src="/scores.js"></script>
+</body>
+</html>

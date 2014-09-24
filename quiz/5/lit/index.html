@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Rendered with Eco -->
+  <meta charset="utf-8" />
+
+  <!-- Site Properities -->
+  <title>quizwiz</title>
+  <meta name="description" content="This is the quiz that happened in saMMsCRIthi '14'" />
+  <meta name="keywords" content="quiz,general,knowledge" />
+
+  <!-- DocPad Meta -->
+  <meta name="generator" content="DocPad v6.56.0" />
+
+  <!-- DocPad Styles + Our Own -->
+  <link  rel="stylesheet" href="/2014/quiz/main.css" /><link  rel="stylesheet" href="/jquery-ui.css" />
+</head>
+<body>
+  <header>
+    <h1>Literature</h1>
+  </header>
+  <article>
+    <ul>
+<li><a href="q1">1</a></li>
+<li><a href="q2">2</a></li>
+<li><a href="q3">3</a></li>
+<li><a href="q4">4</a></li>
+</ul>
+
+<script>
+var url = window.location.href;
+
+if (url.substr(-1) == '/') url = url.substr(0, url.length - 1);
+
+url = url.split('/');
+url[url.length-1]=Number(url[url.length-1])+1;
+var nextlocation = url.join('/');
+document.write('<a href="' + nextlocation + '">Next round</a>');
+</script>
+  </article>
+
+  <!-- DocPad Scripts + Our Own -->
+  <script defer="defer"  src="/main.js"></script><script defer="defer"  src="/jquery.js"></script><script defer="defer"  src="/jquery-ui.js"></script><script defer="defer"  src="/scores.js"></script>
+</body>
+</html>
